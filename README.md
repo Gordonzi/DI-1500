@@ -20,3 +20,5 @@ Module 3: Streaming Data
   o	Stream GPS co-ordinates to PDI to demonstrate IoT
 •	Understand and implement the new Kafka data streaming steps:
   o	Kafka Producer /  Consumer
+
+  this is a change
