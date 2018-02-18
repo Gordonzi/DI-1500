@@ -30,7 +30,10 @@ On completing this course, you will be able to:
 
 ### Module 1 - Project / Lifecycle Management
 ```
- * Deploy PDI projects for: Dev, UAT, Prod environments
+ Deploy PDI projects for: 
+  * Development - local file repository
+  * UAT - EE repository 
+  * Production - EE repository
 ```
 
 ### Module 2 - PDI as a Data Source
@@ -53,8 +56,9 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 
 ## Acknowledgments
-
+```
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
 =======
+```
