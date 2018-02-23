@@ -1,4 +1,4 @@
-# Adv Pentaho Data Integration - DI 1100
+# Adv Pentaho Data Integration - DI 1500
 This course is aimed at introducing the Pentaho ETL tool to folks who are involved in a Pentaho implementation. Data Analysts, Project Managers, Professional Services consultants, Data Architects, Report Designers will gain a solid understanding of the key ETL concepts and workflows.
 
 ## Getting Started
