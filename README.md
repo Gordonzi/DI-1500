@@ -68,8 +68,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Acknowledgments
 ```
-* Beppe
-* Morgan
-* Ca
-=======
+* Beppe Raymaekers
+* Morgan Senechal
+* Caio Moreno de Souza
 ```
