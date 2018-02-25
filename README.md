@@ -12,6 +12,8 @@ Java JDK 9.0.x
 Docker for Windows
 Git
 Visual Code Source
+R
+RStudio
 Jenkins
 ```
 
