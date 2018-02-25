@@ -20,9 +20,7 @@ Jenkins
 ### Installing
 A step by step series of guides can be found at:
 ```
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+[Artefacts for DI 5000](https://www.dropbox.com/sh/6nl31ts10sjimnr/AADFXjTek4f9ANyBivVVAhqFa?dl=0) - Shared File on DropBox
 ```
 
 ## Course Overview
