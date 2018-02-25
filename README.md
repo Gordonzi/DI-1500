@@ -62,6 +62,16 @@ On completing this course, you will be able to:
   * Metadata Injection Workflows
   * Metadata Injection Scenarios
 ```
+### Module 5 - Scalability
+```
+  Master & Slave nodes
+  Clustering
+  Worker Nodes * this is currently under development
+  Partitioning
+  Scheduling
+  Checkpoints
+  
+```
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
