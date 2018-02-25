@@ -1,0 +1,35 @@
+<root><location>
+<name>London</name>
+<region>City of London, Greater London</region>
+<country>United Kingdom</country>
+<lat>51.52</lat>
+<lon>-0.11</lon>
+<tz_id>Europe/London</tz_id>
+<localtime_epoch>1516364217</localtime_epoch>
+<localtime>2018-01-19 12:16</localtime>
+</location><current><last_updated_epoch>1516363239</last_updated_epoch>
+<last_updated>2018-01-19 12:00</last_updated>
+<temp_c>6</temp_c>
+<temp_f>42.8</temp_f>
+<is_day>1</is_day>
+<condition>
+<text>Sunny</text>
+<icon>//cdn.apixu.com/weather/64x64/day/113.png</icon>
+<code>1000</code>
+</condition>
+<wind_mph>17.4</wind_mph>
+<wind_kph>28.1</wind_kph>
+<wind_degree>250</wind_degree>
+<wind_dir>WSW</wind_dir>
+<pressure_mb>1010</pressure_mb>
+<pressure_in>30.3</pressure_in>
+<precip_mm>0</precip_mm>
+<precip_in>0</precip_in>
+<humidity>65</humidity>
+<cloud>0</cloud>
+<feelslike_c>1.5</feelslike_c>
+<feelslike_f>34.7</feelslike_f>
+<vis_km>10</vis_km>
+<vis_miles>6</vis_miles>
+</current>
+</root>
