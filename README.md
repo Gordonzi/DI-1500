@@ -6,19 +6,17 @@ These instructions will get you up and running on your local machine for develop
 
 ### Prerequisites
 The following software need to be installed and configured:
-
 ```
 Pentaho Business Analytics 8.x
 Java JDK 9.0.x
 Docker for Windows
 Git
+Visual Code Source
 Jenkins
 ```
 
 ### Installing
 A step by step series of guides can be found at:
-
-
 ```
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
@@ -31,7 +29,8 @@ On completing this course, you will be able to:
 ### Module 1 - Project / Lifecycle Management
 ```
  Deploy PDI projects for: 
-  * Development - local file repository
+  * Local - local file repository (with EE option)
+  * Development - EE Repository
   * UAT - EE repository 
   * Production - EE repository
 ```
@@ -51,14 +50,26 @@ On completing this course, you will be able to:
   Implement Kafka
   * Twitter Stream - you will need a twitter account
 ```
+### Module 4 - Metadata Injection
+```
+  Overview of Metadata Injection 
+  * Metadata Injection Workflows
+  * Metadata Injection Scenarios
+```
+### Module 4 - Metadata Injection
+```
+  Overview of Metadata Injection 
+  * Metadata Injection Workflows
+  * Metadata Injection Scenarios
+```
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 
 ## Acknowledgments
 ```
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* Beppe
+* Morgan
+* Ca
 =======
 ```
