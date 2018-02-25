@@ -23,6 +23,7 @@ A step by step series of guides can be found at:
 [Artefacts for DI 5000](https://www.dropbox.com/sh/6nl31ts10sjimnr/AADFXjTek4f9ANyBivVVAhqFa?dl=0) - Shared File on DropBox
 
 
+
 ## Course Overview
 On completing this course, you will be able to:
 
@@ -72,9 +73,6 @@ On completing this course, you will be able to:
   Checkpoints
   
 ```
-## Versioning
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 
 ## Acknowledgments
 ```
