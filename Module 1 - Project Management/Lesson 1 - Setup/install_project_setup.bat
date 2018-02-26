@@ -1,4 +1,20 @@
 @echo off
+cls
+echo.
+echo. This script installs the required Project files for the Online Retail.
+echo.
+echo. The script connects to  GitHub and clones 4 repositories:
+echo.   Common - common project properties
+echo.   Configuration - configuration files for each environment
+echo.   Sales DWH - Project 1 content
+echo.   Data Export - Project 2 content
+echo.
+echo. Once the following System variables have been set, the kettle.properties
+echo. files are updated for each environment.
+echo.
+echo. The window will close once scripts have successfully executed.
+echo.
+echo.
 
 Set PROJ_DIR=%CD%
 set "PROJ_DIR=%PROJ_DIR:\=/%"
@@ -11,14 +27,14 @@ IF NOT DEFINED PENTAHO_INSTALL SET PENTAHO_INSTALL="C:\Pentaho"
 IF NOT DEFINED PENTAHO_PORT SET PENTAHO_PORT="8080"
 IF NOT DEFINED POSTGRES_PORT SET POSTGRES_PORT="5432"
 
-rem clone the repos 
+rem clone the repositories
 git clone https://github.com/joreilly/pentaho_project_common.git common
 git clone https://github.com/joreilly/pentaho_project_configuration.git configuration
 git clone https://github.com/joreilly/pentaho_project_sales_dwh.git sales_dwh
 git clone https://github.com/joreilly/pentaho_project_data_export.git data_export
 
 
-rem now we will update kettle.properties and spoon.bat
+rem update kettle.properties and spoon.bat
 cd configuration
 
 set back=%cd%
