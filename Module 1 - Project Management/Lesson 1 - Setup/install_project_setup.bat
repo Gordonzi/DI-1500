@@ -28,10 +28,10 @@ IF NOT DEFINED PENTAHO_PORT SET PENTAHO_PORT="8080"
 IF NOT DEFINED POSTGRES_PORT SET POSTGRES_PORT="5432"
 
 rem clone the repositories
-git clone https://github.com/joreilly/pentaho_project_common.git common
-git clone https://github.com/joreilly/pentaho_project_configuration.git configuration
-git clone https://github.com/joreilly/pentaho_project_sales_dwh.git sales_dwh
-git clone https://github.com/joreilly/pentaho_project_data_export.git data_export
+git clone https://github.com/jporeilly/pentaho_project_common.git common
+git clone https://github.com/jporeilly/pentaho_project_configuration.git configuration
+git clone https://github.com/jporeilly/pentaho_project_sales_dwh.git sales_dwh
+git clone https://github.com/jporeilly/pentaho_project_data_export.git data_export
 
 
 rem update kettle.properties and spoon.bat
