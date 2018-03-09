@@ -2,7 +2,7 @@
 This course is aimed at introducing the Pentaho ETL tool to folks who are involved in a Pentaho implementation. Data Analysts, Project Managers, Professional Services consultants, Data Architects, Report Designers will gain a solid understanding of the key ETL concepts and workflows.
 
 ## Getting Started
-These instructions will get you up and running on your local machine for development and testing purposes. 
+These instructions will get you up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 The following software need to be installed and configured:
@@ -29,10 +29,10 @@ On completing this course, you will be able to:
 
 ### Module 1 - Project / Lifecycle Management
 ```
- Deploy PDI projects for: 
+ Deploy PDI projects for:
   * Local - local file repository (with EE option)
   * Development - EE Repository
-  * UAT - EE repository 
+  * UAT - EE repository
   * Production - EE repository
 ```
 
@@ -44,25 +44,22 @@ On completing this course, you will be able to:
   * Machine Learning
   * Data Services
 ```  
+
 ### Module 3 - Streaming Data
 ```
-  Implement a MQTT Broker 
+  Implement a MQTT Broker
   * Stream GPS co-ordinates to PDI to demonstrate IoT
   Implement Kafka
   * Twitter Stream - you will need a twitter account
 ```
+
 ### Module 4 - Metadata Injection
 ```
-  Overview of Metadata Injection 
+  Overview of Metadata Injection
   * Metadata Injection Workflows
   * Metadata Injection Scenarios
 ```
-### Module 4 - Metadata Injection
-```
-  Overview of Metadata Injection 
-  * Metadata Injection Workflows
-  * Metadata Injection Scenarios
-```
+
 ### Module 5 - Scalability
 ```
   Master & Slave nodes
@@ -71,7 +68,7 @@ On completing this course, you will be able to:
   Partitioning
   Scheduling
   Checkpoints
-  
+
 ```
 
 ## Acknowledgments
