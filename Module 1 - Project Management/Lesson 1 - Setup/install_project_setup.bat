@@ -10,7 +10,7 @@ echo.   Sales DWH - Project 1 content
 echo.   Data Export - Project 2 content
 echo.
 echo. Once the following System variables have been set, the kettle.properties
-echo. files are updated for each environment.
+echo. and spoon.bat files are updated for each environment.
 echo.
 echo. The window will close once scripts have successfully executed.
 echo.
