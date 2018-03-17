@@ -749,35 +749,27 @@ Score probability of fraud</note>
     <fields>
       <field>
         <name>first_time_customer</name>
-        <rename/>
       </field>
       <field>
         <name>order_dollar_amount</name>
-        <rename/>
       </field>
       <field>
         <name>num_items</name>
-        <rename/>
       </field>
       <field>
         <name>age</name>
-        <rename/>
       </field>
       <field>
         <name>web_order</name>
-        <rename/>
       </field>
       <field>
         <name>total_transactions_to_date</name>
-        <rename/>
       </field>
       <field>
         <name>hour_of_day</name>
-        <rename/>
       </field>
       <field>
         <name>billing_shipping_zip_equal</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -846,171 +838,6 @@ Score probability of fraud</note>
     </GUI>
   </step>
   <step>
-    <name>ouput</name>
-    <type>TextFileOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding>UTF-8</encoding>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>${Internal.Entry.Current.Directory}\output\predictions</name>
-      <is_command>N</is_command>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention>csv</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
-    <fields>
-      <field>
-        <name>first_time_customer</name>
-        <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
-        <currency/>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>order_dollar_amount</name>
-        <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
-        <currency/>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>num_items</name>
-        <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
-        <currency/>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>age</name>
-        <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
-        <currency/>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>web_order</name>
-        <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
-        <currency/>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>total_transactions_to_date</name>
-        <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
-        <currency/>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>hour_of_day</name>
-        <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
-        <currency/>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>billing_shipping_zip_equal</name>
-        <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
-        <currency/>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>pred</name>
-        <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
-        <currency/>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>640</xloc>
-      <yloc>416</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Predict</name>
     <type>RScriptExcecutor</type>
     <description/>
@@ -1030,17 +857,25 @@ Score probability of fraud</note>
     <strings_as_factors>N</strings_as_factors>
     <include_input_as_output>N</include_input_as_output>
     <script># Load Random Forest Package
-
+library(randomForest)
 
 # Convert Test Data to Data Frame
-
+test &lt;- as.data.frame(test)
 
 # Load Random Forest Model
-
+load("C:\\Projects\\machine_learning\\train_model_output\\rf.rda")
 
 # Predict
+pred &lt;- predict(rf, newdata = test)
 
+# Convert to Data Frame
+pred.df &lt;- as.data.frame(pred)
 
+# Prepare output data
+submission &lt;- data.frame(cbind(test,pred.df))
+
+# Output data
+submission
 
 </script>
     <r_log_level>DETAILED</r_log_level>
@@ -1117,95 +952,72 @@ Score probability of fraud</note>
     <fields>
       <field>
         <name>customer_name</name>
-        <rename/>
       </field>
       <field>
         <name>customer_id</name>
-        <rename/>
       </field>
       <field>
         <name>customer_billing_zip</name>
-        <rename/>
       </field>
       <field>
         <name>transaction_id</name>
-        <rename/>
       </field>
       <field>
         <name>card_number</name>
-        <rename/>
       </field>
       <field>
         <name>expiry_date</name>
-        <rename/>
       </field>
       <field>
         <name>ship_to_address</name>
-        <rename/>
       </field>
       <field>
         <name>ship_to_city</name>
-        <rename/>
       </field>
       <field>
         <name>ship_to_country</name>
-        <rename/>
       </field>
       <field>
         <name>ship_to_customer_number</name>
-        <rename/>
       </field>
       <field>
         <name>ship_to_email</name>
-        <rename/>
       </field>
       <field>
         <name>ship_to_name</name>
-        <rename/>
       </field>
       <field>
         <name>ship_to_phone</name>
-        <rename/>
       </field>
       <field>
         <name>ship_to_state</name>
-        <rename/>
       </field>
       <field>
         <name>ship_to_zip</name>
-        <rename/>
       </field>
       <field>
         <name>first_time_customer</name>
-        <rename/>
       </field>
       <field>
         <name>order_dollar_amount</name>
-        <rename/>
       </field>
       <field>
         <name>num_items</name>
-        <rename/>
       </field>
       <field>
         <name>age</name>
-        <rename/>
       </field>
       <field>
         <name>web_order</name>
-        <rename/>
       </field>
       <field>
         <name>total_transactions_to_date</name>
-        <rename/>
       </field>
       <field>
         <name>hour_of_day</name>
-        <rename/>
       </field>
       <field>
         <name>billing_shipping_zip_equal</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -1428,7 +1240,7 @@ Score probability of fraud</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>/data/customer.csv</filename>
+    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 4 - Machine Learning\Exercise - Credit Card\data\customer.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -1446,10 +1258,10 @@ Score probability of fraud</note>
         <name>customer_name</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>22</length>
+        <length>19</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1457,7 +1269,7 @@ Score probability of fraud</note>
         <name>customer_id</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -1468,7 +1280,7 @@ Score probability of fraud</note>
         <name>customer_billing_zip</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -1500,7 +1312,7 @@ Score probability of fraud</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${Internal.Entry.Current.Directory}/data/customer_billing.csv</filename>
+    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 4 - Machine Learning\Exercise - Credit Card\data\customer_billing.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -1518,7 +1330,7 @@ Score probability of fraud</note>
         <name>customer_id</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -1529,7 +1341,7 @@ Score probability of fraud</note>
         <name>transaction_id</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -1540,7 +1352,7 @@ Score probability of fraud</note>
         <name>card_number</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -1551,7 +1363,7 @@ Score probability of fraud</note>
         <name>expiry_date</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -1583,7 +1395,7 @@ Score probability of fraud</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${Internal.Entry.Current.Directory}/data/transaction_details.csv</filename>
+    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 4 - Machine Learning\Exercise - Credit Card\data\transaction_details.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -1601,7 +1413,7 @@ Score probability of fraud</note>
         <name>customer_id</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -1612,7 +1424,7 @@ Score probability of fraud</note>
         <name>transaction_id</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -1623,7 +1435,7 @@ Score probability of fraud</note>
         <name>ship_to_address</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>1</length>
@@ -1634,10 +1446,10 @@ Score probability of fraud</note>
         <name>ship_to_address_1</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>62</length>
+        <length>45</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1645,10 +1457,10 @@ Score probability of fraud</note>
         <name>ship_to_city</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>22</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1656,7 +1468,7 @@ Score probability of fraud</note>
         <name>ship_to_country</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>3</length>
@@ -1667,7 +1479,7 @@ Score probability of fraud</note>
         <name>ship_to_customer_number</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -1678,18 +1490,7 @@ Score probability of fraud</note>
         <name>ship_to_email</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>27</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>ship_to_name</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>23</length>
@@ -1697,10 +1498,21 @@ Score probability of fraud</note>
         <trim_type>none</trim_type>
       </field>
       <field>
+        <name>ship_to_name</name>
+        <type>String</type>
+        <format/>
+        <currency>£</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>19</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
         <name>ship_to_phone</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>12</length>
@@ -1711,7 +1523,7 @@ Score probability of fraud</note>
         <name>ship_to_state</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>2</length>
@@ -1722,7 +1534,7 @@ Score probability of fraud</note>
         <name>ship_to_zip</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -1731,9 +1543,9 @@ Score probability of fraud</note>
       </field>
       <field>
         <name>first_time_customer</name>
-        <type>String</type>
+        <type>Boolean</type>
         <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>-1</length>
@@ -1744,10 +1556,10 @@ Score probability of fraud</note>
         <name>order_dollar_amount</name>
         <type>Number</type>
         <format>#.#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>6</length>
+        <length>5</length>
         <precision>1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1755,7 +1567,7 @@ Score probability of fraud</note>
         <name>num_items</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -1766,7 +1578,7 @@ Score probability of fraud</note>
         <name>age</name>
         <type>Number</type>
         <format>#.#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>5</length>
@@ -1775,9 +1587,9 @@ Score probability of fraud</note>
       </field>
       <field>
         <name>web_order</name>
-        <type>String</type>
+        <type>Boolean</type>
         <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>-1</length>
@@ -1788,7 +1600,7 @@ Score probability of fraud</note>
         <name>total_transactions_to_date</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -1799,7 +1611,7 @@ Score probability of fraud</note>
         <name>hour_of_day</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -2094,6 +1906,171 @@ FROM strataml_customer_billing
       <draw>Y</draw>
     </GUI>
   </step>
+  <step>
+    <name>ouput</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding>UTF-8</encoding>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>${Internal.Entry.Current.Directory}\output\predictions</name>
+      <is_command>N</is_command>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention>csv</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>first_time_customer</name>
+        <type>Number</type>
+        <format>####0.0#########;-####0.0#########</format>
+        <currency/>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>order_dollar_amount</name>
+        <type>Number</type>
+        <format>####0.0#########;-####0.0#########</format>
+        <currency/>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>num_items</name>
+        <type>Number</type>
+        <format>####0.0#########;-####0.0#########</format>
+        <currency/>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>age</name>
+        <type>Number</type>
+        <format>####0.0#########;-####0.0#########</format>
+        <currency/>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>web_order</name>
+        <type>Number</type>
+        <format>####0.0#########;-####0.0#########</format>
+        <currency/>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>total_transactions_to_date</name>
+        <type>Number</type>
+        <format>####0.0#########;-####0.0#########</format>
+        <currency/>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>hour_of_day</name>
+        <type>Number</type>
+        <format>####0.0#########;-####0.0#########</format>
+        <currency/>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>billing_shipping_zip_equal</name>
+        <type>Number</type>
+        <format>####0.0#########;-####0.0#########</format>
+        <currency/>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>pred</name>
+        <type>Number</type>
+        <format>####0.0#########;-####0.0#########</format>
+        <currency/>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
@@ -2102,30 +2079,6 @@ FROM strataml_customer_billing
   <attributes>
     <group>
       <name>explorerState</name>
-      <attribute>
-        <key>ouput</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>Select predict fields</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>customer transaction</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>customer billing</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>Select fields</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>customer</key>
-        <value/>
-      </attribute>
     </group>
   </attributes>
 </transformation>

@@ -474,35 +474,14 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>Exercise: Weather Forecast - CDA</note>
-      <xloc>144</xloc>
-      <yloc>48</yloc>
-      <width>215</width>
+      <note>Exercise: Weather Forecast - API</note>
+      <xloc>176</xloc>
+      <yloc>80</yloc>
+      <width>209</width>
       <heigth>28</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>255</bordercolorred>
-      <bordercolorgreen>255</bordercolorgreen>
-      <bordercolorblue>255</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
-      <note>Used as a CDA datasource</note>
-      <xloc>144</xloc>
-      <yloc>80</yloc>
-      <width>148</width>
-      <heigth>26</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
       <fontitalic>N</fontitalic>
       <fontcolorred>0</fontcolorred>
       <fontcolorgreen>0</fontcolorgreen>
@@ -1018,7 +997,7 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
         <currency/>
         <decimal/>
         <group/>
-        <nullif>8a5046e47bdd4f59950111726172912</nullif>
+        <nullif>c8e3a047f3c5407ab5c114442182802</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -1427,8 +1406,8 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
     <urlInField>N</urlInField>
     <urlField/>
     <encoding>UTF-8</encoding>
-    <httpLogin/>
-    <httpPassword>Encrypted </httpPassword>
+    <httpLogin>james.oreilly@hitachivantara.com</httpLogin>
+    <httpPassword>Encrypted 2be98afc86aa7f2e49f10a9638cc2ff8b</httpPassword>
     <proxyHost/>
     <proxyPort/>
     <socketTimeout/>

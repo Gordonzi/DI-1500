@@ -561,7 +561,7 @@ View the widget_output.txt before / after any changes.</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1100\Module 5 - Scalability\Lesson 2 - Monitoring &amp; Clustering\Guided Demo Round-Robin or Copy\widgets.txt</filename>
+    <filename>C:\Pentaho Training\DI 1500\Module 5 - Scalability\Lesson 2 - Clustering\Guided Demo Round-Robin or Copy\widgets.txt</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -598,7 +598,7 @@ View the widget_output.txt before / after any changes.</note>
         <trim_type>none</trim_type>
       </field>
     </fields>
-    <cluster_schema>Pentaho</cluster_schema>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -615,7 +615,7 @@ View the widget_output.txt before / after any changes.</note>
     <name>Data Grid</name>
     <type>DataGrid</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -743,7 +743,7 @@ View the widget_output.txt before / after any changes.</note>
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>C:\Pentaho Training\DI 1100\Module 5 - Scalability\Lesson 2 - Monitoring &amp; Clustering\Guided Demo Round-Robin or Copy\widgets_country_output</name>
+      <name>C:\Pentaho Training\DI 1500\Module 5 - Scalability\Lesson 2 - Clustering\Guided Demo Round-Robin or Copy\widgets_country_output</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>

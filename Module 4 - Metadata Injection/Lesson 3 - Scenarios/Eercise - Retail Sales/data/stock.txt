@@ -1,3 +1,0 @@
-date | product | count
-31-12-2017 | A3342FFSA | 231
-31-12-2017 | B213FSA32 | 3321

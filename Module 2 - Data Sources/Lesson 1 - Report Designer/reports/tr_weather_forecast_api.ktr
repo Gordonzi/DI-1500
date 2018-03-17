@@ -997,7 +997,7 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
         <currency/>
         <decimal/>
         <group/>
-        <nullif>8a5046e47bdd4f59950111726172912</nullif>
+        <nullif>c8e3a047f3c5407ab5c114442182802</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -1406,7 +1406,7 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
     <urlInField>N</urlInField>
     <urlField/>
     <encoding>UTF-8</encoding>
-    <httpLogin>jp.oreilly@hotmail.com</httpLogin>
+    <httpLogin>james.oreilly@hitachivantara.com</httpLogin>
     <httpPassword>Encrypted 2be98afc86aa7f2e49f10a9638cc2ff8b</httpPassword>
     <proxyHost/>
     <proxyPort/>

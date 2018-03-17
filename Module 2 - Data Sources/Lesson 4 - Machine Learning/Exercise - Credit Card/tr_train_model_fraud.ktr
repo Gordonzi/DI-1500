@@ -827,27 +827,30 @@ Train, Tune, Test Model in R</note>
     <output_is_raw_text>N</output_is_raw_text>
     <strings_as_factors>N</strings_as_factors>
     <include_input_as_output>N</include_input_as_output>
-    <script># Load Random Forest Package
+    <script># You will need to download and install the random Forest package
+# install.packages("randomForest")
 
 
+# Load Random Forest Package
+library(randomForest)
 
 # Convert Train dataset to Data Frame
-
+train.dt &lt;- as.data.frame(train)
 
 
 # Train Model with 50 trees take 6 minutes on this VM
 #rf &lt;- randomForest(train.dt$reported_as_fraud_historic ~ ., train.dt, ntree=50, norm.votes=FALSE)
 
 # Train Model with 5 trees take 30 sceonds minutes on this VM
-
-
+rf &lt;- randomForest(train.dt$reported_as_fraud_historic ~ ., train.dt, ntree=5, norm.votes=FALSE)
 
 # Save Model to output folder
-
-
+save(rf, file="C:\\Projects\\machine_learning\\train_model_output\\rf.rda")
 
 # Print message
-</script>
+ok &lt;- "Finished"
+ok.df &lt;- as.data.frame(ok)
+ok.df</script>
     <r_log_level>Detailed</r_log_level>
     <load_r_script_at_runtime>N</load_r_script_at_runtime>
     <r_script_to_load/>
@@ -972,7 +975,7 @@ Train, Tune, Test Model in R</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1100\Module 2 - Data Sources\Lesson 4 - Machine Learning\data\customer_billing.csv</filename>
+    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 4 - Machine Learning\Exercise - Credit Card\data\customer_billing.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -1055,7 +1058,7 @@ Train, Tune, Test Model in R</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1100\Module 2 - Data Sources\Lesson 4 - Machine Learning\data\transaction_details.csv</filename>
+    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 4 - Machine Learning\Exercise - Credit Card\data\transaction_details.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -1303,7 +1306,7 @@ Train, Tune, Test Model in R</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1100\Module 2 - Data Sources\Lesson 4 - Machine Learning\data\transaction_fraud_report.csv</filename>
+    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 4 - Machine Learning\Exercise - Credit Card\data\transaction_fraud_report.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -1405,7 +1408,7 @@ Train, Tune, Test Model in R</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1100\Module 2 - Data Sources\Lesson 4 - Machine Learning\data\customer.csv</filename>
+    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 4 - Machine Learning\Exercise - Credit Card\data\customer.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
