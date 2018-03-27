@@ -13,9 +13,9 @@ echo. 1. Zookeeper
 echo. 2. Kafka - Single Broker
 echo.
 echo.
-echo. 3. Topic
+echo. 3. Create Topic - Pentaho
 echo. 4. List Topics
-echo. 5. Consumer - Kafka Group
+echo. 5. Consumer - Pentaho Group
 echo. 6. Producer
 echo.
 echo. 7. Stop Kafka Broker
@@ -27,12 +27,12 @@ IF '%x%' == '%x%' GOTO Item_%x%
 
 :Item_1
 CD \Confluent-4.0\bin\windows\
-start  zookeeper-server-start.bat  C:\Confluent-4.0\etc\kafka\zookeeper.properties
+start  zookeeper-server-start.bat  C:\confluent-oss-4.0.0-2.11\etc\kafka\zookeeper.properties
 GOTO Start
 
 :Item_2
 CD \Confluent-4.0\bin\windows\
-start kafka-server-start.bat  C:\Confluent-4.0\etc\kafka\server.properties
+start kafka-server-start.bat  C:\confluent-oss-4.0.0-2.11\etc\kafka\server.properties
 GOTO Start
 
 :Item_3
@@ -47,7 +47,7 @@ GOTO Start
 
 :Item_5
 CD \Confluent-4.0\bin\windows\
-start kafka-console-consumer.bat --topic Pentaho  --from-beginning  --bootstrap-server localhost:9092 --consumer-property group.id=Pentaho-Group 
+start kafka-console-consumer.bat --topic Pentaho  --from-beginning  --bootstrap-server localhost:9092 --consumer-property group.id=Pentaho-group 
 GOTO Start
 
 :Item_6

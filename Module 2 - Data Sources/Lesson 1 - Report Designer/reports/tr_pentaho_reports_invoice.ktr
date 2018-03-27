@@ -481,7 +481,7 @@ and the output name for the generated report.</note>
     <notepad>
       <note>Exercise: Customer Invoice</note>
       <xloc>320</xloc>
-      <yloc>48</yloc>
+      <yloc>64</yloc>
       <width>175</width>
       <heigth>28</heigth>
       <fontname>Segoe UI</fontname>

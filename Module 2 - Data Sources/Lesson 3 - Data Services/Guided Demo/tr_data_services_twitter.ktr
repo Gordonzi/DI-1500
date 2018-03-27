@@ -7,7 +7,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>/home/admin</directory>
+    <directory>/</directory>
     <parameters>
     </parameters>
     <log>
@@ -439,8 +439,8 @@
       <note>Guided Demonstration: Data Services - Twitter</note>
       <xloc>272</xloc>
       <yloc>48</yloc>
-      <width>299</width>
-      <heigth>28</heigth>
+      <width>453</width>
+      <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -460,8 +460,8 @@
       <note>Configure a PDI step as a Data Service</note>
       <xloc>272</xloc>
       <yloc>80</yloc>
-      <width>209</width>
-      <heigth>26</heigth>
+      <width>313</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -491,7 +491,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1100\Module 2 - Data Sources\Lesson 3 - Data Services\Guided Demo\Mar_22_11_57_39 AM_2017_CET_Pentaho_TwitterData.csv</filename>
+    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 3 - Data Services\Guided Demo\Mar_22_11_57_39 AM_2017_CET_Pentaho_TwitterData.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -505,17 +505,6 @@
     <newline_possible>N</newline_possible>
     <encoding>UTF-8</encoding>
     <fields>
-      <field>
-        <name/>
-        <type>String</type>
-        <format/>
-        <currency>£</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>62</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
       <field>
         <name>text</name>
         <type>String</type>
