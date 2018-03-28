@@ -1,42 +1,41 @@
-# Advanced Pentaho Data Integration - DI 1500
-This course is aimed at introducing the Pentaho ETL tool to folks who are involved in a Pentaho implementation. Data Analysts, Project Managers, Professional Services consultants, Data Architects, Report Designers will gain a solid understanding of the key ETL concepts and workflows.
 
-## Getting Started
-These instructions will get you up and running on your local machine for development and testing purposes.
+# Advanced Pentaho Data Integration
+  This course is designed to build upon your fundamental knowledge of Pentaho Data Integration (PDI).   
+  Moving beyond the basics of creating transformations and jobs, you will learn how to use PDI in real-world project scenarios.
+  You'll add PDI as a data source for a variety of visualization options, utilize PDI's streaming data processing capabilties, build transformations with metadata injection, and scale and performance tune your PDI solution.
 
 ### Prerequisites
+
 The following software need to be installed and configured:
 ```
+
 Pentaho Business Analytics 8.x
 Java JDK 9.0.x
 Docker for Windows
-Git
-Visual Code Source
+Git / GitHub
+Atom / Visual Studio Code
 R
 RStudio
 Jenkins
+
 ```
 
-### Installing
-A step by step series of guides can be found at:
+### Course Overview
 
-[Artefacts for DI 5000](https://www.dropbox.com/sh/6nl31ts10sjimnr/AADFXjTek4f9ANyBivVVAhqFa?dl=0) - Shared File on DropBox
-
-
-
-## Course Overview
 On completing this course, you will be able to:
 
-### Module 1 - Project / Lifecycle Management
+#### Module 1 - Metadata Injection
 ```
- Deploy PDI projects for:
-  * Local - local file repository (with EE option)
-  * Development - EE Repository
-  * UAT - EE repository
-  * Production - EE repository
+  Overview of Metadata Injection
+  * Metadata Injection Workflows
+    - Standard
+    - Push / Pull
+    - 2-phase
+    - Filters
+  * Metadata Injection Scenarios
+    - Retail Sales
 ```
-
-### Module 2 - PDI as a Data Source
+#### Module 2 - PDI as a Data Source
 ```
   Configure PDI as a datasource for various scenarios:
   * Pentaho Reports step
@@ -45,7 +44,7 @@ On completing this course, you will be able to:
   * Data Services
 ```  
 
-### Module 3 - Streaming Data
+#### Module 3 - Streaming Data
 ```
   Implement a MQTT Broker
   * Stream GPS co-ordinates to PDI to demonstrate IoT
@@ -53,25 +52,23 @@ On completing this course, you will be able to:
   * Twitter Stream - you will need a twitter account
 ```
 
-### Module 4 - Metadata Injection
+#### Module 4 - Scalability
 ```
-  Overview of Metadata Injection
-  * Metadata Injection Workflows
-  * Metadata Injection Scenarios
-```
-
-### Module 5 - Scalability
-```
-  Master & Slave nodes
-  Clustering
-  Worker Nodes * this is currently under development
-  Partitioning
+  Configuring Master & Slave nodes
+  * Clustering
+  * Partitioning
   Scheduling
   Checkpoints
-
 ```
 
-## Acknowledgments
+### Getting Started
+
+[Course Materials](/scripts/course_materials.cmd) - Batch script for GitHub repositories *Requires Git to be installed.
+
+[Software](https://www.dropbox.com/sh/6nl31ts10sjimnr/AADFXjTek4f9ANyBivVVAhqFa?dl=0) - Shared File on DropBox
+
+
+#### Acknowledgments
 ```
 Beppe Raymaekers
 Morgan Senechal
