@@ -438,10 +438,10 @@
     <notepad>
       <note>Inject condition into Filter rows step: 
 Result "John" or "Fred" will logged as "TRUE"</note>
-      <xloc>224</xloc>
-      <yloc>320</yloc>
-      <width>246</width>
-      <heigth>42</heigth>
+      <xloc>240</xloc>
+      <yloc>352</yloc>
+      <width>364</width>
+      <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -461,8 +461,8 @@ Result "John" or "Fred" will logged as "TRUE"</note>
       <note>Guided Demonstration: Using Filters in Metadata Injection</note>
       <xloc>224</xloc>
       <yloc>144</yloc>
-      <width>372</width>
-      <heigth>28</heigth>
+      <width>564</width>
+      <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
