@@ -1,0 +1,39 @@
+ExecutionTime;ExecutionResult;ExecutionNrErrors;ExecutionLinesRead;ExecutionLinesWritten;ExecutionLinesInput;ExecutionLinesOutput;ExecutionLinesRejected;ExecutionLinesUpdated;ExecutionLinesDeleted;ExecutionFilesRetrieved;ExecutionExitStatus;ExecutionLogText;ExecutionLogChannelId
+1050;Y;0;0;0;0;0;0;0;0;0;0;2017/07/28 10:47:02 - tr_inject_supplier_metadata - Dispatching started for transformation [tr_inject_supplier_metadata]
+2017/07/28 10:47:02 - Get rows from result: supplier.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2017/07/28 10:47:02 - metadata_target.xlsx.0 - Finished processing (I=7, O=0, R=0, W=7, U=0, E=0)
+2017/07/28 10:47:02 - metadata_suppliers.xlsx.0 - Finished processing (I=17, O=0, R=0, W=17, U=0, E=0)
+2017/07/28 10:47:02 - Wildcards.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/07/28 10:47:02 - Get File Names.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/07/28 10:47:03 - Join supplier metadata.0 - Finished processing (I=0, O=0, R=18, W=9, U=0, E=0)
+2017/07/28 10:47:03 - tr_process_supplier_template - Dispatching started for transformation [tr_process_supplier_template]
+2017/07/28 10:47:03 - Microsoft Excel Input.0 - Finished processing (I=2, O=0, R=0, W=2, U=0, E=0)
+2017/07/28 10:47:03 - Select values.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2017/07/28 10:47:03 - Get ${supplier} Variable.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2017/07/28 10:47:03 - Text file output.0 - Finished processing (I=0, O=2, R=2, W=2, U=0, E=0)
+;4f80f211-68a3-4fbf-9133-275ca323ab15              
+897;Y;0;0;0;0;0;0;0;0;0;0;2017/07/28 10:47:02 - tr_inject_supplier_metadata - Dispatching started for transformation [tr_inject_supplier_metadata]
+2017/07/28 10:47:02 - Get rows from result: supplier.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2017/07/28 10:47:02 - metadata_target.xlsx.0 - Finished processing (I=7, O=0, R=0, W=7, U=0, E=0)
+2017/07/28 10:47:02 - metadata_suppliers.xlsx.0 - Finished processing (I=17, O=0, R=0, W=17, U=0, E=0)
+2017/07/28 10:47:02 - Wildcards.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/07/28 10:47:02 - Get File Names.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/07/28 10:47:03 - Join supplier metadata.0 - Finished processing (I=0, O=0, R=18, W=9, U=0, E=0)
+2017/07/28 10:47:03 - tr_process_supplier_template - Dispatching started for transformation [tr_process_supplier_template]
+2017/07/28 10:47:03 - Microsoft Excel Input.0 - Finished processing (I=2, O=0, R=0, W=2, U=0, E=0)
+2017/07/28 10:47:03 - Select values.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2017/07/28 10:47:03 - Get ${supplier} Variable.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2017/07/28 10:47:03 - Text file output.0 - Finished processing (I=0, O=2, R=2, W=2, U=0, E=0)
+2017/07/28 10:47:03 - tr_inject_supplier_metadata - Dispatching started for transformation [tr_inject_supplier_metadata]
+2017/07/28 10:47:03 - metadata_target.xlsx.0 - Finished processing (I=7, O=0, R=0, W=7, U=0, E=0)
+2017/07/28 10:47:03 - Get rows from result: supplier.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2017/07/28 10:47:03 - Wildcards.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/07/28 10:47:03 - metadata_suppliers.xlsx.0 - Finished processing (I=17, O=0, R=0, W=17, U=0, E=0)
+2017/07/28 10:47:03 - Get File Names.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/07/28 10:47:04 - Join supplier metadata.0 - Finished processing (I=0, O=0, R=18, W=8, U=0, E=0)
+2017/07/28 10:47:04 - tr_process_supplier_template - Dispatching started for transformation [tr_process_supplier_template]
+2017/07/28 10:47:04 - Microsoft Excel Input.0 - Finished processing (I=3, O=0, R=0, W=3, U=0, E=0)
+2017/07/28 10:47:04 - Select values.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2017/07/28 10:47:04 - Get ${supplier} Variable.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2017/07/28 10:47:04 - Text file output.0 - Finished processing (I=0, O=3, R=3, W=3, U=0, E=0)
+;4f80f211-68a3-4fbf-9133-275ca323ab15              

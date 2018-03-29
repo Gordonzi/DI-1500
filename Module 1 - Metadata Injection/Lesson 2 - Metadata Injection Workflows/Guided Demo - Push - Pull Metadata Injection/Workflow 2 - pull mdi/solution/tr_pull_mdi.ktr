@@ -444,9 +444,9 @@ into the main Transformation and pssed onto the output file.
   - the 'results' are pulled into the main Transformation.
   - passed onto the output file</note>
       <xloc>336</xloc>
-      <yloc>96</yloc>
-      <width>412</width>
-      <heigth>114</heigth>
+      <yloc>112</yloc>
+      <width>589</width>
+      <heigth>164</heigth>
       <fontname>Calibri Light</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -465,9 +465,9 @@ into the main Transformation and pssed onto the output file.
     <notepad>
       <note>Pull data from the template</note>
       <xloc>384</xloc>
-      <yloc>624</yloc>
-      <width>156</width>
-      <heigth>26</heigth>
+      <yloc>640</yloc>
+      <width>228</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -491,9 +491,9 @@ the output file.
 The 'results' fields are optional and are only needed at
 design time, so that further steps have fields to work with.</note>
       <xloc>464</xloc>
-      <yloc>400</yloc>
-      <width>314</width>
-      <heigth>105</heigth>
+      <yloc>368</yloc>
+      <width>469</width>
+      <heigth>155</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -512,9 +512,9 @@ design time, so that further steps have fields to work with.</note>
     <notepad>
       <note>Metadata to inject</note>
       <xloc>464</xloc>
-      <yloc>272</yloc>
-      <width>107</width>
-      <heigth>26</heigth>
+      <yloc>288</yloc>
+      <width>154</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -534,8 +534,8 @@ design time, so that further steps have fields to work with.</note>
       <note>Guided Demonstration: Metadata Injection - Pull</note>
       <xloc>336</xloc>
       <yloc>64</yloc>
-      <width>312</width>
-      <heigth>28</heigth>
+      <width>472</width>
+      <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -624,7 +624,7 @@ design time, so that further steps have fields to work with.</note>
     </remotesteps>
     <GUI>
       <xloc>384</xloc>
-      <yloc>544</yloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -682,7 +682,7 @@ design time, so that further steps have fields to work with.</note>
     </remotesteps>
     <GUI>
       <xloc>384</xloc>
-      <yloc>272</yloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -739,7 +739,7 @@ design time, so that further steps have fields to work with.</note>
     </remotesteps>
     <GUI>
       <xloc>752</xloc>
-      <yloc>544</yloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

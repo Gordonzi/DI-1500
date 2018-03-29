@@ -438,9 +438,9 @@
     <notepad>
       <note>Metadata Injection into the Select values step only.</note>
       <xloc>352</xloc>
-      <yloc>320</yloc>
-      <width>277</width>
-      <heigth>26</heigth>
+      <yloc>368</yloc>
+      <width>410</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -463,8 +463,8 @@
 - Output data get streamed back to the parent transformation</note>
       <xloc>176</xloc>
       <yloc>96</yloc>
-      <width>588</width>
-      <heigth>73</heigth>
+      <width>883</width>
+      <heigth>107</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -487,9 +487,9 @@ into the parent transformation
 (Dummy step for illustration, this
 could be any step)</note>
       <xloc>352</xloc>
-      <yloc>384</yloc>
-      <width>211</width>
-      <heigth>89</heigth>
+      <yloc>432</yloc>
+      <width>312</width>
+      <heigth>131</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -509,8 +509,8 @@ could be any step)</note>
       <note>Guided Demonstration: Metadata Injection - Pull </note>
       <xloc>176</xloc>
       <yloc>48</yloc>
-      <width>316</width>
-      <heigth>28</heigth>
+      <width>478</width>
+      <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -529,9 +529,9 @@ could be any step)</note>
     <notepad>
       <note>Test data (could come from files, RDBMS etc.)</note>
       <xloc>192</xloc>
-      <yloc>192</yloc>
-      <width>251</width>
-      <heigth>26</heigth>
+      <yloc>224</yloc>
+      <width>370</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -580,7 +580,7 @@ could be any step)</note>
     </remotesteps>
     <GUI>
       <xloc>496</xloc>
-      <yloc>240</yloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -607,7 +607,7 @@ could be any step)</note>
     </remotesteps>
     <GUI>
       <xloc>352</xloc>
-      <yloc>240</yloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -669,7 +669,7 @@ could be any step)</note>
     </remotesteps>
     <GUI>
       <xloc>192</xloc>
-      <yloc>240</yloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

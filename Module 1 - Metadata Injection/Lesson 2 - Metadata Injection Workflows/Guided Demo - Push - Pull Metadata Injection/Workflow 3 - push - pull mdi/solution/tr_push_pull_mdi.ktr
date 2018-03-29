@@ -438,9 +438,9 @@
     <notepad>
       <note>Pull data from the template</note>
       <xloc>544</xloc>
-      <yloc>336</yloc>
-      <width>156</width>
-      <heigth>26</heigth>
+      <yloc>368</yloc>
+      <width>228</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -459,9 +459,9 @@
     <notepad>
       <note>Push data into the template</note>
       <xloc>240</xloc>
-      <yloc>336</yloc>
-      <width>157</width>
-      <heigth>26</heigth>
+      <yloc>368</yloc>
+      <width>230</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -482,9 +482,9 @@
 - Streaming source step 'Test data - Input' (from this transformation)
 - Streaming target step 'Input stream' (into the template)</note>
       <xloc>320</xloc>
-      <yloc>496</yloc>
-      <width>371</width>
-      <heigth>58</heigth>
+      <yloc>528</yloc>
+      <width>551</width>
+      <heigth>82</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -502,10 +502,10 @@
     </notepad>
     <notepad>
       <note>Metadata to inject</note>
-      <xloc>512</xloc>
-      <yloc>240</yloc>
-      <width>107</width>
-      <heigth>26</heigth>
+      <xloc>544</xloc>
+      <yloc>272</yloc>
+      <width>154</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -525,8 +525,8 @@
       <note>Exercise: Metadata Injection - Push/Pull</note>
       <xloc>224</xloc>
       <yloc>48</yloc>
-      <width>256</width>
-      <heigth>28</heigth>
+      <width>388</width>
+      <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -551,8 +551,8 @@
  - the 'Results' bet pulled back to the main Transformation.  </note>
       <xloc>224</xloc>
       <yloc>80</yloc>
-      <width>326</width>
-      <heigth>105</heigth>
+      <width>481</width>
+      <heigth>155</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -646,7 +646,7 @@
     </remotesteps>
     <GUI>
       <xloc>464</xloc>
-      <yloc>416</yloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -704,7 +704,7 @@
     </remotesteps>
     <GUI>
       <xloc>464</xloc>
-      <yloc>240</yloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -766,7 +766,7 @@
     </remotesteps>
     <GUI>
       <xloc>240</xloc>
-      <yloc>416</yloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -823,7 +823,7 @@
     </remotesteps>
     <GUI>
       <xloc>688</xloc>
-      <yloc>416</yloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

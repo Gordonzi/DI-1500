@@ -438,9 +438,9 @@
     <notepad>
       <note>Test data (could come from files, RDBMS etc.)</note>
       <xloc>256</xloc>
-      <yloc>160</yloc>
-      <width>251</width>
-      <heigth>26</heigth>
+      <yloc>192</yloc>
+      <width>370</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -459,9 +459,9 @@
     <notepad>
       <note>Metadata Injection into the Select values step only</note>
       <xloc>400</xloc>
-      <yloc>304</yloc>
-      <width>274</width>
-      <heigth>26</heigth>
+      <yloc>336</yloc>
+      <width>406</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -482,8 +482,8 @@
 - Input and Output are within the template</note>
       <xloc>240</xloc>
       <yloc>96</yloc>
-      <width>236</width>
-      <heigth>42</heigth>
+      <width>348</width>
+      <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -503,8 +503,8 @@
       <note>Exercise: Standard Metadata Injection</note>
       <xloc>240</xloc>
       <yloc>64</yloc>
-      <width>242</width>
-      <heigth>28</heigth>
+      <width>370</width>
+      <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -556,7 +556,7 @@
     </remotesteps>
     <GUI>
       <xloc>400</xloc>
-      <yloc>224</yloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -618,7 +618,7 @@
     </remotesteps>
     <GUI>
       <xloc>256</xloc>
-      <yloc>224</yloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -675,7 +675,7 @@
     </remotesteps>
     <GUI>
       <xloc>544</xloc>
-      <yloc>224</yloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

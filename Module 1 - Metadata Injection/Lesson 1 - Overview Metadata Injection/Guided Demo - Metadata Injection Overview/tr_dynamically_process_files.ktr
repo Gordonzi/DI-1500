@@ -538,8 +538,8 @@ the incoming data file and output it into a standard CSV format.</note>
     <notepad>
       <note>This step is from the Marketplace
 Currently an unsupported step</note>
-      <xloc>256</xloc>
-      <yloc>640</yloc>
+      <xloc>176</xloc>
+      <yloc>624</yloc>
       <width>273</width>
       <heigth>58</heigth>
       <fontname>Segoe UI</fontname>

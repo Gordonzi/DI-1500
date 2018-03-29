@@ -439,9 +439,9 @@
       <note>Input is streamed into this step
 coming from the parent transformation</note>
       <xloc>304</xloc>
-      <yloc>208</yloc>
-      <width>219</width>
-      <heigth>42</heigth>
+      <yloc>224</yloc>
+      <width>324</width>
+      <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -460,9 +460,9 @@ coming from the parent transformation</note>
     <notepad>
       <note>Metadata Injection into the Select values step only.</note>
       <xloc>368</xloc>
-      <yloc>352</yloc>
-      <width>277</width>
-      <heigth>26</heigth>
+      <yloc>384</yloc>
+      <width>410</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -485,8 +485,8 @@ coming from the parent transformation</note>
 - Output is within this transformation</note>
       <xloc>288</xloc>
       <yloc>96</yloc>
-      <width>399</width>
-      <heigth>73</heigth>
+      <width>598</width>
+      <heigth>107</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -506,8 +506,8 @@ coming from the parent transformation</note>
       <note>Guided Demonstration: Metadata injection - Push</note>
       <xloc>288</xloc>
       <yloc>64</yloc>
-      <width>318</width>
-      <heigth>28</heigth>
+      <width>482</width>
+      <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -556,7 +556,7 @@ coming from the parent transformation</note>
     </remotesteps>
     <GUI>
       <xloc>304</xloc>
-      <yloc>272</yloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -583,7 +583,7 @@ coming from the parent transformation</note>
     </remotesteps>
     <GUI>
       <xloc>464</xloc>
-      <yloc>272</yloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -640,7 +640,7 @@ coming from the parent transformation</note>
     </remotesteps>
     <GUI>
       <xloc>624</xloc>
-      <yloc>272</yloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

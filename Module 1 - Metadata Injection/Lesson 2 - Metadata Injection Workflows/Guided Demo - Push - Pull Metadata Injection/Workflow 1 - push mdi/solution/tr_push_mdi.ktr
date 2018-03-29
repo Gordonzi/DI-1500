@@ -440,10 +440,10 @@
 - Streaming source step 'Test data - Input' (from this transformation)
 - Streaming target step 'Input stream' (into the template)
 </note>
-      <xloc>224</xloc>
-      <yloc>560</yloc>
-      <width>371</width>
-      <heigth>73</heigth>
+      <xloc>240</xloc>
+      <yloc>592</yloc>
+      <width>551</width>
+      <heigth>107</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -461,10 +461,10 @@
     </notepad>
     <notepad>
       <note>Test data (could come from files, RDBMS etc.)</note>
-      <xloc>224</xloc>
-      <yloc>496</yloc>
-      <width>251</width>
-      <heigth>26</heigth>
+      <xloc>240</xloc>
+      <yloc>528</yloc>
+      <width>370</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -482,10 +482,10 @@
     </notepad>
     <notepad>
       <note>Push data into the template</note>
-      <xloc>224</xloc>
-      <yloc>336</yloc>
-      <width>157</width>
-      <heigth>26</heigth>
+      <xloc>240</xloc>
+      <yloc>368</yloc>
+      <width>230</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -503,10 +503,10 @@
     </notepad>
     <notepad>
       <note>Metadata to inject</note>
-      <xloc>384</xloc>
-      <yloc>272</yloc>
-      <width>107</width>
-      <heigth>26</heigth>
+      <xloc>368</xloc>
+      <yloc>304</yloc>
+      <width>154</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -526,8 +526,8 @@
       <note>Guided Demonstration: Metadata Injection - Push</note>
       <xloc>176</xloc>
       <yloc>80</yloc>
-      <width>318</width>
-      <heigth>28</heigth>
+      <width>482</width>
+      <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -552,8 +552,8 @@
   - passed onto the output file</note>
       <xloc>176</xloc>
       <yloc>128</yloc>
-      <width>337</width>
-      <heigth>99</heigth>
+      <width>479</width>
+      <heigth>142</heigth>
       <fontname>Calibri Light</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -628,8 +628,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>400</yloc>
+      <xloc>560</xloc>
+      <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -686,8 +686,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>272</yloc>
+      <xloc>560</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -748,8 +748,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>400</yloc>
+      <xloc>240</xloc>
+      <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

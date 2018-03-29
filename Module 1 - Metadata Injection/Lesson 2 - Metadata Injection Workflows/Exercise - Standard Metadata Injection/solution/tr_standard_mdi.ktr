@@ -437,10 +437,10 @@
   <notepads>
     <notepad>
       <note>Metadata to inject</note>
-      <xloc>240</xloc>
-      <yloc>240</yloc>
-      <width>107</width>
-      <heigth>26</heigth>
+      <xloc>256</xloc>
+      <yloc>288</yloc>
+      <width>154</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -458,10 +458,10 @@
     </notepad>
     <notepad>
       <note>Inject and execute the template</note>
-      <xloc>240</xloc>
-      <yloc>352</yloc>
-      <width>176</width>
-      <heigth>26</heigth>
+      <xloc>256</xloc>
+      <yloc>400</yloc>
+      <width>257</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -481,8 +481,8 @@
       <note>Exercise: Standard Metadata Injection</note>
       <xloc>112</xloc>
       <yloc>64</yloc>
-      <width>242</width>
-      <heigth>28</heigth>
+      <width>370</width>
+      <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -507,8 +507,8 @@
  The Metadata Injection Template injects the mdi_fieldnames using the Select values step..</note>
       <xloc>112</xloc>
       <yloc>96</yloc>
-      <width>484</width>
-      <heigth>104</heigth>
+      <width>714</width>
+      <heigth>156</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -578,8 +578,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>144</xloc>
-      <yloc>352</yloc>
+      <xloc>160</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -636,8 +636,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>144</xloc>
-      <yloc>240</yloc>
+      <xloc>160</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
