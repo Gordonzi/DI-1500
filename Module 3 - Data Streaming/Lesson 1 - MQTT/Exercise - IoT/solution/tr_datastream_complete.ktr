@@ -16,7 +16,7 @@
       </parameter>
       <parameter>
         <name>publisherClientID</name>
-        <default_value>dest-86c825fe2bed4aae9ba70e8dcf8f9357</default_value>
+        <default_value>dest-5db19e2cf1b94dd8866618706f2e7a7a</default_value>
         <description>Client ID for publisher.</description>
       </parameter>
       <parameter>
@@ -49,7 +49,7 @@ te (miliseconds)</description>
       </parameter>
       <parameter>
         <name>subscriberClientID</name>
-        <default_value>origin-86c825fe2bed4aae9ba70e8dcf8f9357</default_value>
+        <default_value>origin-5db19e2cf1b94dd8866618706f2e7a7a</default_value>
         <description>Client ID for subscriber.</description>
       </parameter>
       <parameter>

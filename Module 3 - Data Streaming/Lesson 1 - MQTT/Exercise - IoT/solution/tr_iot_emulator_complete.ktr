@@ -16,7 +16,7 @@
       </parameter>
       <parameter>
         <name>clientID</name>
-        <default_value>86c825fe2bed4aae9ba70e8dcf8f9357</default_value>
+        <default_value>5db19e2cf1b94dd8866618706f2e7a7a</default_value>
         <description>client identifier </description>
       </parameter>
       <parameter>
@@ -826,6 +826,7 @@ PDI MQTT Steps</note>
         <replace_field_by_string>VALUE</replace_field_by_string>
         <whole_word>yes</whole_word>
         <case_sensitive>yes</case_sensitive>
+        <is_unicode>no</is_unicode>
       </field>
       <field>
         <in_stream_name>message</in_stream_name>
@@ -837,6 +838,7 @@ PDI MQTT Steps</note>
         <replace_field_by_string>TIMESTAMP</replace_field_by_string>
         <whole_word>yes</whole_word>
         <case_sensitive>yes</case_sensitive>
+        <is_unicode>no</is_unicode>
       </field>
       <field>
         <in_stream_name>message</in_stream_name>
@@ -848,6 +850,7 @@ PDI MQTT Steps</note>
         <replace_field_by_string>LAT</replace_field_by_string>
         <whole_word>yes</whole_word>
         <case_sensitive>yes</case_sensitive>
+        <is_unicode>no</is_unicode>
       </field>
       <field>
         <in_stream_name>message</in_stream_name>
@@ -859,6 +862,7 @@ PDI MQTT Steps</note>
         <replace_field_by_string>LONG</replace_field_by_string>
         <whole_word>yes</whole_word>
         <case_sensitive>yes</case_sensitive>
+        <is_unicode>no</is_unicode>
       </field>
       <field>
         <in_stream_name>message</in_stream_name>
@@ -870,6 +874,7 @@ PDI MQTT Steps</note>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>yes</case_sensitive>
+        <is_unicode>no</is_unicode>
       </field>
       <field>
         <in_stream_name>message</in_stream_name>
@@ -881,6 +886,7 @@ PDI MQTT Steps</note>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>yes</case_sensitive>
+        <is_unicode>no</is_unicode>
       </field>
       <field>
         <in_stream_name>message</in_stream_name>
@@ -892,6 +898,7 @@ PDI MQTT Steps</note>
         <replace_field_by_string>ID</replace_field_by_string>
         <whole_word>yes</whole_word>
         <case_sensitive>yes</case_sensitive>
+        <is_unicode>no</is_unicode>
       </field>
     </fields>
     <cluster_schema/>
