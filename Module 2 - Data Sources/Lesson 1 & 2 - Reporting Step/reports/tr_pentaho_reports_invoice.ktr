@@ -437,10 +437,10 @@
   <notepads>
     <notepad>
       <note>Create a row for Customer "333"</note>
-      <xloc>128</xloc>
-      <yloc>128</yloc>
-      <width>180</width>
-      <heigth>26</heigth>
+      <xloc>144</xloc>
+      <yloc>192</yloc>
+      <width>269</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -459,10 +459,10 @@
     <notepad>
       <note>Create the path\filename for the Report Template
 and the output name for the generated report.</note>
-      <xloc>336</xloc>
-      <yloc>256</yloc>
-      <width>271</width>
-      <heigth>42</heigth>
+      <xloc>352</xloc>
+      <yloc>368</yloc>
+      <width>398</width>
+      <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -482,8 +482,8 @@ and the output name for the generated report.</note>
       <note>Exercise: Customer Invoice</note>
       <xloc>320</xloc>
       <yloc>64</yloc>
-      <width>175</width>
-      <heigth>28</heigth>
+      <width>262</width>
+      <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -504,10 +504,10 @@ and the output name for the generated report.</note>
 Note: The Pentaho Server needs to be 
 running to access the Sampledata
 database.</note>
-      <xloc>544</xloc>
-      <yloc>80</yloc>
-      <width>212</width>
-      <heigth>74</heigth>
+      <xloc>560</xloc>
+      <yloc>128</yloc>
+      <width>313</width>
+      <heigth>106</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -559,8 +559,8 @@ var Report_Output;
 
 
 // Create full path combining transformation directory + filename
-Report_Template = getVariable("Internal.Transformation.Filename.Directory"," ")+Report_Template_name;
-Report_Output = getVariable("Internal.Transformation.Filename.Directory"," ")+Report_Output_name;
+Report_Template = getVariable("Internal.Entry.Current.Directory"," ")+Report_Template_name;
+Report_Output = getVariable("Internal.Entry.Current.Directory"," ")+Report_Output_name;
 
 // Trim the leading 'file:C///' characters from the full path
 Report_Template = substr(Report_Template,6);
@@ -593,8 +593,8 @@ Report_Output = substr(Report_Output,6);</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>341</xloc>
-      <yloc>184</yloc>
+      <xloc>400</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -627,8 +627,8 @@ Report_Output = substr(Report_Output,6);</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>547</xloc>
-      <yloc>185</yloc>
+      <xloc>656</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -706,8 +706,8 @@ Report_Output = substr(Report_Output,6);</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>135</xloc>
-      <yloc>185</yloc>
+      <xloc>144</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

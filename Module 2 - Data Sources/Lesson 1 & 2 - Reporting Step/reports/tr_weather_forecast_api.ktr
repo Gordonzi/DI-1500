@@ -451,13 +451,13 @@
   </info>
   <notepads>
     <notepad>
-      <note>In order to run this transformation you need to get a Key from www.worldweatheronline.com
+      <note>In order to run this transformation you may need to get a Key from www.worldweatheronline.com
 
 If the key has expired and you cant generate another then use: tr_weather_forecast_file.ktr</note>
-      <xloc>224</xloc>
-      <yloc>400</yloc>
-      <width>501</width>
-      <heigth>57</heigth>
+      <xloc>384</xloc>
+      <yloc>528</yloc>
+      <width>786</width>
+      <heigth>83</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -475,10 +475,10 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
     </notepad>
     <notepad>
       <note>Exercise: Weather Forecast - API</note>
-      <xloc>176</xloc>
-      <yloc>80</yloc>
-      <width>209</width>
-      <heigth>28</heigth>
+      <xloc>96</xloc>
+      <yloc>64</yloc>
+      <width>316</width>
+      <heigth>37</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -604,8 +604,8 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
       </output>
     </remotesteps>
     <GUI>
-      <xloc>160</xloc>
-      <yloc>224</yloc>
+      <xloc>48</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -875,7 +875,7 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
     </remotesteps>
     <GUI>
       <xloc>384</xloc>
-      <yloc>128</yloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -940,8 +940,8 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
-      <yloc>128</yloc>
+      <xloc>784</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -973,8 +973,8 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
-      <yloc>224</yloc>
+      <xloc>784</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -997,7 +997,7 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
         <currency/>
         <decimal/>
         <group/>
-        <nullif>8a5046e47bdd4f59950111726172912</nullif>
+        <nullif>e58adbb305084984b36221600180904</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -1009,7 +1009,7 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
         <currency/>
         <decimal/>
         <group/>
-        <nullif>5</nullif>
+        <nullif>1</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -1035,8 +1035,8 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>224</yloc>
+      <xloc>192</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1074,8 +1074,8 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
-      <yloc>320</yloc>
+      <xloc>784</xloc>
+      <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1225,7 +1225,7 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
     </remotesteps>
     <GUI>
       <xloc>384</xloc>
-      <yloc>320</yloc>
+      <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1306,8 +1306,8 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>224</yloc>
+      <xloc>576</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1346,8 +1346,8 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>128</yloc>
+      <xloc>576</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1386,8 +1386,8 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>320</yloc>
+      <xloc>576</xloc>
+      <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1406,8 +1406,8 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
     <urlInField>N</urlInField>
     <urlField/>
     <encoding>UTF-8</encoding>
-    <httpLogin>jp.oreilly@hotmail.com</httpLogin>
-    <httpPassword>Encrypted 2be98afc86aa7f2e49f10a9638cc2ff8b</httpPassword>
+    <httpLogin>joreilly@orange.fr</httpLogin>
+    <httpPassword>Encrypted 2be98afc86aa7f2b0a21ebd698fc0fe8a</httpPassword>
     <proxyHost/>
     <proxyPort/>
     <socketTimeout/>
@@ -1446,7 +1446,7 @@ If the key has expired and you cant generate another then use: tr_weather_foreca
     </remotesteps>
     <GUI>
       <xloc>384</xloc>
-      <yloc>224</yloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
