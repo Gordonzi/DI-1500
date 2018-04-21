@@ -439,8 +439,8 @@
       <note>Guided Demonstration: Pentaho Reporting</note>
       <xloc>192</xloc>
       <yloc>48</yloc>
-      <width>415</width>
-      <heigth>37</heigth>
+      <width>276</width>
+      <heigth>28</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -460,9 +460,9 @@
       <note>The paths to the report'template' and out are defined 
 in the Data Grid</note>
       <xloc>192</xloc>
-      <yloc>224</yloc>
-      <width>437</width>
-      <heigth>58</heigth>
+      <yloc>192</yloc>
+      <width>294</width>
+      <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -482,7 +482,7 @@ in the Data Grid</note>
   <order>
     <hop>
       <from>Data Grid</from>
-      <to>Pentaho Reporting Output</to>
+      <to>Pentaho Reporting Output -pdf</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -499,7 +499,7 @@ in the Data Grid</note>
     </partitioning>
     <fields>
       <field>
-        <name>template</name>
+        <name>prpt_path</name>
         <type>String</type>
         <format/>
         <currency/>
@@ -523,8 +523,8 @@ in the Data Grid</note>
     </fields>
     <data>
       <line>
-        <item>C:\Projects\reports\template\Invoice_Statements.prpt</item>
-        <item>C:\Projects\reports\pdf\Invoice.pdf</item>
+        <item>C:\Projects/reports/template/Inventory.prpt</item>
+        <item>C:\Projects/reports/pdf/Inventory List.pdf</item>
       </line>
     </data>
     <cluster_schema/>
@@ -535,13 +535,13 @@ in the Data Grid</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>128</yloc>
+      <xloc>192</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Pentaho Reporting Output</name>
+    <name>Pentaho Reporting Output -pdf</name>
     <type>PentahoReportingOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -551,7 +551,7 @@ in the Data Grid</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <input_file_field>template</input_file_field>
+    <input_file_field>prpt_path</input_file_field>
     <output_file_field>output_path</output_file_field>
     <create_parent_folder>N</create_parent_folder>
     <parameters>  </parameters>
@@ -564,8 +564,8 @@ in the Data Grid</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>128</yloc>
+      <xloc>400</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
