@@ -32,9 +32,9 @@ On completing this course, you will be able to:
     - Push / Pull
     - 2-phase
     - Filters
-  * Metadata Injection Scenarios
-    - Retail Sales
+  * Use Case - Retail Sales
 ```
+
 #### Module 2 - PDI as a Data Source
 ```
   Configure PDI as a datasource for various scenarios:
@@ -49,8 +49,9 @@ On completing this course, you will be able to:
 ```
   Implement a MQTT Broker
   * Stream GPS co-ordinates to PDI to demonstrate IoT
+  * Use Case - Racing Cars
   Implement Kafka
-  * Twitter Stream - you will need a twitter account
+  * Use Case - Twitter Stream - you will need a twitter account
 ```
 
 #### Module 4 - Scalability
@@ -64,7 +65,7 @@ On completing this course, you will be able to:
 
 ### Getting Started
 
-[Course Materials](https://jporeilly.github.io/Pentaho-Training/DI1500/scripts/course_materials.cmd) - Batch script for GitHub repositories *Requires Git to be installed.
+[Course Materials](https://jporeilly.github.io/Pentaho-Training/scripts/course_materials.cmd) - Batch script for GitHub repositories *Requires Git to be installed.
 
 [Software](https://www.dropbox.com/sh/6nl31ts10sjimnr/AADFXjTek4f9ANyBivVVAhqFa?dl=0) - Shared File on DropBox
 
