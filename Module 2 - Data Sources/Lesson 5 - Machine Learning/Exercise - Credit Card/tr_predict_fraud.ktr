@@ -481,8 +481,8 @@ billing and shipping zip codes are
 equal.</note>
       <xloc>768</xloc>
       <yloc>176</yloc>
-      <width>281</width>
-      <heigth>131</heigth>
+      <width>190</width>
+      <heigth>89</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -503,10 +503,10 @@ equal.</note>
 
 Join and blend data from different
 sources.</note>
-      <xloc>96</xloc>
+      <xloc>256</xloc>
       <yloc>176</yloc>
-      <width>283</width>
-      <heigth>107</heigth>
+      <width>191</width>
+      <heigth>73</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -527,10 +527,10 @@ sources.</note>
 
 Deploy Model in R (Random Forest)
 Score probability of fraud</note>
-      <xloc>304</xloc>
-      <yloc>480</yloc>
-      <width>296</width>
-      <heigth>107</heigth>
+      <xloc>400</xloc>
+      <yloc>400</yloc>
+      <width>198</width>
+      <heigth>73</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -550,8 +550,8 @@ Score probability of fraud</note>
       <note>This transformation will predict new data</note>
       <xloc>448</xloc>
       <yloc>112</yloc>
-      <width>332</width>
-      <heigth>34</heigth>
+      <width>227</width>
+      <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -571,8 +571,8 @@ Score probability of fraud</note>
       <note>Exercise: Credit Card Fraud (Deploy and Predict)</note>
       <xloc>448</xloc>
       <yloc>64</yloc>
-      <width>465</width>
-      <heigth>37</heigth>
+      <width>307</width>
+      <heigth>28</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
@@ -730,8 +730,8 @@ Score probability of fraud</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1280</xloc>
-      <yloc>368</yloc>
+      <xloc>1072</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -832,8 +832,8 @@ Score probability of fraud</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>480</yloc>
+      <xloc>928</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -876,8 +876,6 @@ submission &lt;- data.frame(cbind(test,pred.df))
 
 # Output data
 submission
-
-
 
 </script>
     <r_log_level>DETAILED</r_log_level>
@@ -935,8 +933,8 @@ submission
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
-      <yloc>480</yloc>
+      <xloc>800</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1116,8 +1114,8 @@ submission
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>368</yloc>
+      <xloc>928</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1194,8 +1192,8 @@ submission
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1280</xloc>
-      <yloc>480</yloc>
+      <xloc>1072</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1226,8 +1224,8 @@ submission
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
-      <yloc>368</yloc>
+      <xloc>800</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1242,7 +1240,7 @@ submission
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${Internal.Entry.Current.Directory}\data\customer.csv</filename>
+    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 4 - Machine Learning\Exercise - Credit Card\data\customer.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -1298,8 +1296,8 @@ submission
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>368</yloc>
+      <xloc>384</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1314,7 +1312,7 @@ submission
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${Internal.Entry.Current.Directory}\data\customer_billing.csv</filename>
+    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 4 - Machine Learning\Exercise - Credit Card\data\customer_billing.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -1381,7 +1379,7 @@ submission
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
+      <xloc>496</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1397,7 +1395,7 @@ submission
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${Internal.Entry.Current.Directory}\data\transaction_details.csv</filename>
+    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 4 - Machine Learning\Exercise - Credit Card\data\transaction_details.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -1762,8 +1760,8 @@ FROM strataml_customer_billing
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>368</yloc>
+      <xloc>496</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1904,7 +1902,7 @@ FROM strataml_customer_billing
     </remotesteps>
     <GUI>
       <xloc>640</xloc>
-      <yloc>368</yloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2069,7 +2067,7 @@ FROM strataml_customer_billing
     </remotesteps>
     <GUI>
       <xloc>640</xloc>
-      <yloc>480</yloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
