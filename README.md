@@ -64,7 +64,7 @@ On completing this course, you will be able to:
 
 ### Getting Started
 
-[Course Materials](/scripts/course_materials.cmd) - Batch script for GitHub repositories *Requires Git to be installed.
+[Course Materials](https://jporeilly.github.io/Pentaho-Training/DI1500/scripts/course_materials.cmd) - Batch script for GitHub repositories *Requires Git to be installed.
 
 [Software](https://www.dropbox.com/sh/6nl31ts10sjimnr/AADFXjTek4f9ANyBivVVAhqFa?dl=0) - Shared File on DropBox
 
