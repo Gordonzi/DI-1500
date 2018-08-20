@@ -39,6 +39,7 @@ On completing this course, you will be able to:
 ```
   Configure PDI as a datasource for various scenarios:
   * Pentaho Reports step
+  * Google BQ & Drive
   * CDA
   * Machine Learning
   * Data Services
