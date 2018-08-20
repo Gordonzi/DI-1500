@@ -8,7 +8,6 @@
 
 The following software need to be installed and configured:
 ```
-
 Pentaho Business Analytics 8.x
 Java JDK 9.0.x
 Docker for Windows
