@@ -1,3 +1,0 @@
-ExecutionTime;ExecutionResult;ExecutionNrErrors;ExecutionLinesRead;ExecutionLinesWritten;ExecutionLinesInput;ExecutionLinesOutput;ExecutionLinesRejected;ExecutionLinesUpdated;ExecutionLinesDeleted;ExecutionFilesRetrieved;ExecutionExitStatus;ExecutionLogText;ExecutionLogChannelId
-877;Y;0;0;0;0;0;0;0;0;0;0;;2a91cb4c-0998-4de2-a14d-99b8fcb6ca93              
-887;Y;0;0;0;0;0;0;0;0;0;0;;2a91cb4c-0998-4de2-a14d-99b8fcb6ca93              
