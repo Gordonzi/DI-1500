@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>weather_cda</name>
+    <name>tr_weather_cda</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -11,18 +11,8 @@
     <parameters>
       <parameter>
         <name>CITY</name>
-        <default_value>Lisbon, Portugal</default_value>
+        <default_value>London</default_value>
         <description>city</description>
-      </parameter>
-      <parameter>
-        <name>SPEED</name>
-        <default_value>Kmph</default_value>
-        <description>kilometers</description>
-      </parameter>
-      <parameter>
-        <name>TEMP</name>
-        <default_value>C</default_value>
-        <description>centigrades</description>
       </parameter>
     </parameters>
     <log>
@@ -445,20 +435,20 @@
     <created_user>-</created_user>
     <created_date>2010/10/24 10:42:25.984</created_date>
     <modified_user>admin</modified_user>
-    <modified_date>2018/01/02 12:27:32.738</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <modified_date>2018/09/05 13:02:53.085</modified_date>
+    <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
     <notepad>
-      <note>In order to run this transformation you need to get a Key from www.worldweatheronline.com</note>
-      <xloc>336</xloc>
-      <yloc>384</yloc>
-      <width>440</width>
-      <heigth>24</heigth>
+      <note>Exercise: Weather Forecast - API</note>
+      <xloc>64</xloc>
+      <yloc>96</yloc>
+      <width>209</width>
+      <heigth>28</heigth>
       <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
+      <fontsize>10</fontsize>
+      <fontbold>Y</fontbold>
       <fontitalic>N</fontitalic>
       <fontcolorred>0</fontcolorred>
       <fontcolorgreen>0</fontcolorgreen>
@@ -467,60 +457,45 @@
       <backgroundcolorgreen>255</backgroundcolorgreen>
       <backgroundcolorblue>255</backgroundcolorblue>
       <bordercolorred>255</bordercolorred>
-      <bordercolorgreen>0</bordercolorgreen>
-      <bordercolorblue>0</bordercolorblue>
+      <bordercolorgreen>255</bordercolorgreen>
+      <bordercolorblue>255</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
   </notepads>
   <order>
     <hop>
       <from>key &amp; days &amp; format</from>
-      <to>worldweatheronline</to>
+      <to>weather_apixu</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>worldweatheronline</from>
+      <from>weather_apixu</from>
       <to>current_cond_result</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>worldweatheronline</from>
-      <to>next_days_result</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>next_days_result</from>
-      <to>temperature min/max</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>temperature min/max</from>
-      <to>next_days</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>normalizing</from>
-      <to>current_conditions_normalized</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>temperature &amp; wind speed</from>
-      <to>normalizing</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>current_cond_result</from>
-      <to>temperature &amp; wind speed</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>temperature &amp; wind speed</from>
-      <to>current_conditions</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Get variables</from>
       <to>key &amp; days &amp; format</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>current_cond_result</from>
+      <to>Row Normaliser</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Row Normaliser</from>
+      <to>conditions_normalized</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>weather_apixu</from>
+      <to>current_cond_result 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>current_cond_result 2</from>
+      <to>current_conditions</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -536,30 +511,6 @@
       <schema_name/>
     </partitioning>
     <fields>
-      <field>
-        <name>TEMP</name>
-        <variable>${TEMP}</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>both</trim_type>
-      </field>
-      <field>
-        <name>SPEED</name>
-        <variable>${SPEED}</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>both</trim_type>
-      </field>
       <field>
         <name>city</name>
         <variable>${CITY}</variable>
@@ -581,8 +532,188 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>192</yloc>
+      <xloc>96</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Row Normaliser</name>
+    <type>Normaliser</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <typefield>typefield</typefield>
+    <fields>
+      <field>
+        <name>city</name>
+        <value>city</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>days</name>
+        <value>days</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>last_updated_epoch</name>
+        <value>last_updated_epoch</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>last_updated</name>
+        <value>last_updated</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>temp_c</name>
+        <value>temp_c</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>temp_f</name>
+        <value>temp_f</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>is_day</name>
+        <value>is_day</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>text</name>
+        <value>text</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>icon</name>
+        <value>icon</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>code</name>
+        <value>code</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>wind_mph</name>
+        <value>wind_mph</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>wind_kph</name>
+        <value>wind_kph</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>wind_degree</name>
+        <value>wind_degree</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>wind_dir</name>
+        <value>wind_dir</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>pressure_mb</name>
+        <value>pressure_mb</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>pressure_in</name>
+        <value>pressure_in</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>precip_mm</name>
+        <value>precip_mm</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>precip_in</name>
+        <value>precip_in</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>humidity</name>
+        <value>humidity</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>cloud</name>
+        <value>cloud</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>feelslike_c</name>
+        <value>feelslike_c</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>feelslike_f</name>
+        <value>feelslike_f</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>vis_km</name>
+        <value>vis_km</value>
+        <norm>value</norm>
+      </field>
+      <field>
+        <name>vis_miles</name>
+        <value>vis_miles</value>
+        <norm>value</norm>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>conditions_normalized</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>typefield</name>
+      </field>
+      <field>
+        <name>value</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -607,7 +738,7 @@
     <validating>N</validating>
     <usetoken>N</usetoken>
     <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
     <rownum_field/>
     <encoding>UTF-8</encoding>
     <file>
@@ -619,8 +750,23 @@
     </file>
     <fields>
       <field>
-        <name>city</name>
-        <xpath>../request/query</xpath>
+        <name>last_updated_epoch</name>
+        <xpath>last_updated_epoch</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>last_updated</name>
+        <xpath>last_updated</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -634,23 +780,8 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>observation_time</name>
-        <xpath>observation_time</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>temp_C</name>
-        <xpath>temp_C</xpath>
+        <name>temp_c</name>
+        <xpath>temp_c</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>Integer</type>
@@ -664,101 +795,191 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>temp_F</name>
-        <xpath>temp_F</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>weatherDesc</name>
-        <xpath>weatherDesc</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>windspeedMiles</name>
-        <xpath>windspeedMiles</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>windspeedKmph</name>
-        <xpath>windspeedKmph</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>winddirDegree</name>
-        <xpath>winddirDegree</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>winddir16Point</name>
-        <xpath>winddir16Point</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>precipMM</name>
-        <xpath>precipMM</xpath>
+        <name>temp_f</name>
+        <xpath>temp_f</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>is_day</name>
+        <xpath>is_day</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>text</name>
+        <xpath>condition/text</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>icon</name>
+        <xpath>condition/icon</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>code</name>
+        <xpath>condition/code</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>wind_mph</name>
+        <xpath>wind_mph</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>wind_kph</name>
+        <xpath>wind_kph</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>wind_degree</name>
+        <xpath>wind_degree</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>wind_dir</name>
+        <xpath>wind_dir</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>pressure_mb</name>
+        <xpath>pressure_mb</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>pressure_in</name>
+        <xpath>pressure_in</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>precip_mm</name>
+        <xpath>precip_mm</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>precip_in</name>
+        <xpath>precip_in</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -784,8 +1005,8 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>visibility</name>
-        <xpath>visibility</xpath>
+        <name>cloud</name>
+        <xpath>cloud</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>Integer</type>
@@ -799,8 +1020,38 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>pressure</name>
-        <xpath>pressure</xpath>
+        <name>feelslike_c</name>
+        <xpath>feelslike_c</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>feelslike_f</name>
+        <xpath>feelslike_f</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>vis_km</name>
+        <xpath>vis_km</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>Integer</type>
@@ -814,8 +1065,8 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>cloudcover</name>
-        <xpath>cloudcover</xpath>
+        <name>vis_miles</name>
+        <xpath>vis_miles</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>Integer</type>
@@ -830,7 +1081,7 @@
       </field>
     </fields>
     <limit>0</limit>
-    <loopxpath>/data/current_condition</loopxpath>
+    <loopxpath>/root/current</loopxpath>
     <IsInFields>Y</IsInFields>
     <IsAFile>N</IsAFile>
     <XmlField>result</XmlField>
@@ -852,7 +1103,397 @@
     </remotesteps>
     <GUI>
       <xloc>336</xloc>
-      <yloc>80</yloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>current_cond_result 2</name>
+    <type>getXMLData</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <namespaceaware>N</namespaceaware>
+    <ignorecomments>N</ignorecomments>
+    <readurl>N</readurl>
+    <validating>N</validating>
+    <usetoken>N</usetoken>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <rownum_field/>
+    <encoding>UTF-8</encoding>
+    <file>
+      <name>${Internal.Entry.Current.Directory}\weather.xml</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>last_updated_epoch</name>
+        <xpath>last_updated_epoch</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>last_updated</name>
+        <xpath>last_updated</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>temp_c</name>
+        <xpath>temp_c</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>temp_f</name>
+        <xpath>temp_f</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>is_day</name>
+        <xpath>is_day</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>text</name>
+        <xpath>condition/text</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>icon</name>
+        <xpath>condition/icon</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>code</name>
+        <xpath>condition/code</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>wind_mph</name>
+        <xpath>wind_mph</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>wind_kph</name>
+        <xpath>wind_kph</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>wind_degree</name>
+        <xpath>wind_degree</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>wind_dir</name>
+        <xpath>wind_dir</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>pressure_mb</name>
+        <xpath>pressure_mb</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>pressure_in</name>
+        <xpath>pressure_in</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>precip_mm</name>
+        <xpath>precip_mm</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>precip_in</name>
+        <xpath>precip_in</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>humidity</name>
+        <xpath>humidity</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>cloud</name>
+        <xpath>cloud</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>feelslike_c</name>
+        <xpath>feelslike_c</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>feelslike_f</name>
+        <xpath>feelslike_f</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>vis_km</name>
+        <xpath>vis_km</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>vis_miles</name>
+        <xpath>vis_miles</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <loopxpath>/root/current</loopxpath>
+    <IsInFields>Y</IsInFields>
+    <IsAFile>N</IsAFile>
+    <XmlField>result</XmlField>
+    <prunePath/>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -872,40 +1513,73 @@
         <name>city</name>
       </field>
       <field>
-        <name>observation_time</name>
+        <name>days</name>
       </field>
       <field>
-        <name>temperature</name>
+        <name>result</name>
       </field>
       <field>
-        <name>weatherDesc</name>
+        <name>last_updated_epoch</name>
       </field>
       <field>
-        <name>windspeedMiles</name>
+        <name>last_updated</name>
       </field>
       <field>
-        <name>windspeedKmph</name>
+        <name>temp_c</name>
       </field>
       <field>
-        <name>winddirDegree</name>
+        <name>temp_f</name>
       </field>
       <field>
-        <name>winddir16Point</name>
+        <name>is_day</name>
       </field>
       <field>
-        <name>precipMM</name>
+        <name>text</name>
+      </field>
+      <field>
+        <name>code</name>
+      </field>
+      <field>
+        <name>wind_mph</name>
+      </field>
+      <field>
+        <name>wind_kph</name>
+      </field>
+      <field>
+        <name>wind_degree</name>
+      </field>
+      <field>
+        <name>wind_dir</name>
+      </field>
+      <field>
+        <name>pressure_mb</name>
+      </field>
+      <field>
+        <name>pressure_in</name>
+      </field>
+      <field>
+        <name>precip_mm</name>
+      </field>
+      <field>
+        <name>precip_in</name>
       </field>
       <field>
         <name>humidity</name>
       </field>
       <field>
-        <name>visibility</name>
+        <name>cloud</name>
       </field>
       <field>
-        <name>pressure</name>
+        <name>feelslike_c</name>
       </field>
       <field>
-        <name>cloudcover</name>
+        <name>feelslike_f</name>
+      </field>
+      <field>
+        <name>vis_km</name>
+      </field>
+      <field>
+        <name>vis_miles</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -917,41 +1591,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>current_conditions_normalized</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>FEATURE</name>
-      </field>
-      <field>
-        <name>VALUE</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>592</xloc>
-      <yloc>192</yloc>
+      <xloc>624</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -974,33 +1615,21 @@
         <currency/>
         <decimal/>
         <group/>
-        <nullif>8a5046e47bdd4f59950111726172912</nullif>
-        <length>0</length>
-        <precision>0</precision>
+        <nullif>c46d9296264249d19d1115051181901</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
       </field>
       <field>
-        <name>num_of_days</name>
-        <type>String</type>
+        <name>days</name>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
         <group/>
-        <nullif>5</nullif>
-        <length>0</length>
-        <precision>0</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>format</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>xml</nullif>
-        <length>0</length>
-        <precision>0</precision>
+        <nullif>1</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
       </field>
     </fields>
@@ -1012,473 +1641,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>192</yloc>
+      <xloc>208</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>next_days</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>city</name>
-        <rename/>
-      </field>
-      <field>
-        <name>date</name>
-        <rename/>
-      </field>
-      <field>
-        <name>temperatureMin</name>
-        <rename>Min Temp</rename>
-      </field>
-      <field>
-        <name>temperatureMax</name>
-        <rename>Max Temp</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>592</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>next_days_result</name>
-    <type>getXMLData</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <rownum_field/>
-    <encoding>UTF-8</encoding>
-    <file>
-      <name>${Internal.Entry.Current.Directory}\weather.xml</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>city</name>
-        <xpath>../request/query</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>date</name>
-        <xpath>date</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>maxtempC</name>
-        <xpath>maxtempC</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>maxtempF</name>
-        <xpath>maxtempF</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>mintempC</name>
-        <xpath>mintempC</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>mintempF</name>
-        <xpath>mintempF</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>windspeedMiles</name>
-        <xpath>windspeedMiles</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>windspeedKmph</name>
-        <xpath>windspeedKmph</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>winddirection</name>
-        <xpath>winddirection</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>winddir16Point</name>
-        <xpath>winddir16Point</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>winddirDegree</name>
-        <xpath>winddirDegree</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>weatherDesc</name>
-        <xpath>weatherDesc</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>precipMM</name>
-        <xpath>precipMM</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Number</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-    </fields>
-    <limit>0</limit>
-    <loopxpath>/data/weather</loopxpath>
-    <IsInFields>Y</IsInFields>
-    <IsAFile>N</IsAFile>
-    <XmlField>result</XmlField>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>336</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>normalizing</name>
-    <type>Normaliser</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <typefield>FEATURE</typefield>
-    <fields>
-      <field>
-        <name>city_1</name>
-        <value>City</value>
-        <norm>VALUE</norm>
-      </field>
-      <field>
-        <name>observation_time</name>
-        <value>Observation time</value>
-        <norm>VALUE</norm>
-      </field>
-      <field>
-        <name>weatherDesc</name>
-        <value>Weather description</value>
-        <norm>VALUE</norm>
-      </field>
-      <field>
-        <name>temperature</name>
-        <value>Temperature</value>
-        <norm>VALUE</norm>
-      </field>
-      <field>
-        <name>windspeed</name>
-        <value>Wind speed</value>
-        <norm>VALUE</norm>
-      </field>
-      <field>
-        <name>winddir16Point</name>
-        <value>Wind direction</value>
-        <norm>VALUE</norm>
-      </field>
-      <field>
-        <name>precipMM</name>
-        <value>Precipitation</value>
-        <norm>VALUE</norm>
-      </field>
-      <field>
-        <name>humidity</name>
-        <value>Humidity</value>
-        <norm>VALUE</norm>
-      </field>
-      <field>
-        <name>visibility</name>
-        <value>Visibility</value>
-        <norm>VALUE</norm>
-      </field>
-      <field>
-        <name>pressure</name>
-        <value>Pressure</value>
-        <norm>VALUE</norm>
-      </field>
-      <field>
-        <name>cloudcover</name>
-        <value>Cloud Cover</value>
-        <norm>VALUE</norm>
-      </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>464</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>temperature &amp; wind speed</name>
-    <type>Janino</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <formula>
-      <field_name>temperature</field_name>
-      <formula_string>TEMP.equals("F")?temp_F:temp_C</formula_string>
-      <value_type>Integer</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field/>
-    </formula>
-    <formula>
-      <field_name>windspeed</field_name>
-      <formula_string>SPEED.equals("Miles")?windspeedMiles:windspeedKmph</formula_string>
-      <value_type>Integer</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field/>
-    </formula>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>464</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>temperature min/max</name>
-    <type>Janino</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <formula>
-      <field_name>temperatureMin</field_name>
-      <formula_string>TEMP.equals("F")?mintempF:mintempC</formula_string>
-      <value_type>Integer</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field/>
-    </formula>
-    <formula>
-      <field_name>temperatureMax</field_name>
-      <formula_string>TEMP.equals("F")?maxtempF:maxtempC</formula_string>
-      <value_type>Integer</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field/>
-    </formula>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>464</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>worldweatheronline</name>
+    <name>weather_apixu</name>
     <type>HTTP</type>
     <description/>
     <distribute>N</distribute>
@@ -1488,10 +1657,10 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <url>http://api.worldweatheronline.com/premium/v1/weather.ashx</url>
+    <url>http://api.apixu.com/v1/current.xml</url>
     <urlInField>N</urlInField>
     <urlField/>
-    <encoding>UTF-8</encoding>
+    <encoding/>
     <httpLogin/>
     <httpPassword>Encrypted </httpPassword>
     <proxyHost/>
@@ -1509,12 +1678,8 @@
         <parameter>key</parameter>
       </arg>
       <arg>
-        <name>num_of_days</name>
-        <parameter>num_of_days</parameter>
-      </arg>
-      <arg>
-        <name>format</name>
-        <parameter>format</parameter>
+        <name>days</name>
+        <parameter>days</parameter>
       </arg>
     </lookup>
     <result>
@@ -1532,7 +1697,7 @@
     </remotesteps>
     <GUI>
       <xloc>336</xloc>
-      <yloc>192</yloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1541,4 +1706,9 @@
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+    </group>
+  </attributes>
 </transformation>

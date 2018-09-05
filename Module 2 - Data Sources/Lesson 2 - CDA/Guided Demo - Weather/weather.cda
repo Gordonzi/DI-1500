@@ -4,8 +4,7 @@
       <Connection id="weather" type="kettle.TransFromFile">
          <KtrFile>tr_weather_cda.ktr</KtrFile>
          <variables datarow-name="CITY"/>
-         <variables datarow-name="TEMP"/>
-      </Connection>
+       </Connection>
    </DataSources>
    
    <DataAccess access="public" cache="true" cacheDuration="3600" connection="weather"
@@ -14,21 +13,9 @@
       <Columns/>
       <Parameters>
          <Parameter default="London" name="CITY" type="String"/>
-         <Parameter default="C" name="TEMP" type="String"/>
       </Parameters>
-      <Query>current_conditions_normalized</Query>
+      <Query>conditions_normalized</Query>
       <Output indexes="0,1"/>
    </DataAccess>
    
-   
-      <DataAccess access="public" cache="true" cacheDuration="3600" connection="weather"
-               id="forecast"
-               type="kettle">
-      <Columns/>
-      <Parameters>
-         <Parameter default="London" name="CITY" type="String"/>
-      </Parameters>
-      <Query>next_days</Query>
-      <Output indexes="0,1,2,3"/>
-   </DataAccess>
-</CDADescriptor>
+ </CDADescriptor>
