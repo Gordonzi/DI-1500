@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>tr_clustered_parttioned_cities</name>
+    <name>tr_clustered_group_by</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -433,6 +433,17 @@
         <dynamic>N</dynamic>
         <partitions_per_slave/>
       </partitionschema>
+      <partitionschema>
+        <name>Dynamic partition</name>
+        <partition>
+          <id>A</id>
+        </partition>
+        <partition>
+          <id>B</id>
+        </partition>
+        <dynamic>Y</dynamic>
+        <partitions_per_slave>1</partitions_per_slave>
+      </partitionschema>
     </partitionschemas>
     <slaveservers>
       <slaveserver>
@@ -520,13 +531,15 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>The Memory Group by step has beepn partitoned.  This ensures each key'd record is sent to the 
-correct partiton on a Slave node. 
-Which Slave node recieves what record is determined by the Master node.</note>
+      <note>As the Group by step is clustered, the rows are sent in round-robin fashion from the CSV
+file input to each Slave node.
+Swim lanes ensure each dataset from the Memory Group by step is then sent to the corresponding 
+Sort row step i.e copy instead of round-robin.
+Each cluster / Slave node returns independent grouped by sorted rows to the Master via the Text file output step.</note>
       <xloc>96</xloc>
       <yloc>224</yloc>
-      <width>514</width>
-      <heigth>58</heigth>
+      <width>600</width>
+      <heigth>90</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -571,7 +584,7 @@ Which Slave node recieves what record is determined by the Master node.</note>
       <method>none</method>
       <schema_name>Static Partition</schema_name>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1100\Module 5 - Scalability\Lesson 2 - Monitoring &amp; Clustering\Guided Demo Clustered Group by\widgets.txt</filename>
+    <filename>C:\Pentaho Training\DI 1100\Module 5 - Scalability\Lesson 2 - Clustering\Guided Demo Clustered Group by\solution\widgets.txt</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -726,7 +739,7 @@ Which Slave node recieves what record is determined by the Master node.</note>
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>C:\Pentaho Training\DI 1100\Module 5 - Scalability\Lesson 3 - Partitioning\Guided Demo Partitioning\widgets_partition_city</name>
+      <name>C:\Pentaho Training\DI 1100\Module 5 - Scalability\Lesson 2 - Clustering\Guided Demo Clustered Group by\solution\widgets_group_by_output</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>

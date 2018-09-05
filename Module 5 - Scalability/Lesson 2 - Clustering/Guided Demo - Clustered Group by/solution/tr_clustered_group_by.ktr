@@ -422,28 +422,6 @@
     <dependencies>
     </dependencies>
     <partitionschemas>
-      <partitionschema>
-        <name>Static Partition</name>
-        <partition>
-          <id>Parttion1</id>
-        </partition>
-        <partition>
-          <id>Partition2</id>
-        </partition>
-        <dynamic>N</dynamic>
-        <partitions_per_slave/>
-      </partitionschema>
-      <partitionschema>
-        <name>Dynamic partition</name>
-        <partition>
-          <id>A</id>
-        </partition>
-        <partition>
-          <id>B</id>
-        </partition>
-        <dynamic>Y</dynamic>
-        <partitions_per_slave>1</partitions_per_slave>
-      </partitionschema>
     </partitionschemas>
     <slaveservers>
       <slaveserver>
@@ -512,7 +490,7 @@
     <notepad>
       <note>Guided Demonstration: Group by</note>
       <xloc>80</xloc>
-      <yloc>48</yloc>
+      <yloc>64</yloc>
       <width>216</width>
       <heigth>28</heigth>
       <fontname>Segoe UI</fontname>
@@ -558,6 +536,11 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
   </notepads>
   <order>
     <hop>
+      <from>CSV file input</from>
+      <to>Memory Group by</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Memory Group by</from>
       <to>Sort rows</to>
       <enabled>Y</enabled>
@@ -565,11 +548,6 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
     <hop>
       <from>Sort rows</from>
       <to>Text file output</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>CSV file input</from>
-      <to>Memory Group by</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -582,9 +560,9 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name>Static Partition</schema_name>
+      <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1100\Module 5 - Scalability\Lesson 2 - Clustering\Guided Demo Clustered Group by\solution\widgets.txt</filename>
+    <filename>C:\Pentaho Training\DI 1100\Module 5 - Scalability\Lesson 2 - Monitoring &amp; Clustering\Guided Demo Clustered Sorting\solution\widgets.txt</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -594,7 +572,7 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
     <buffer_size>50000</buffer_size>
     <lazy_conversion>N</lazy_conversion>
     <add_filename_result>N</add_filename_result>
-    <parallel>N</parallel>
+    <parallel>Y</parallel>
     <newline_possible>N</newline_possible>
     <encoding/>
     <fields>
@@ -629,7 +607,7 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
+      <xloc>96</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -642,9 +620,8 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
-      <method>ModPartitioner</method>
-      <schema_name>Static Partition</schema_name>
-      <field_name>CITY</field_name>
+      <method>none</method>
+      <schema_name/>
     </partitioning>
     <give_back_row>N</give_back_row>
     <group>
@@ -660,7 +637,7 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
         <valuefield/>
       </field>
     </fields>
-    <cluster_schema/>
+    <cluster_schema>Pentaho</cluster_schema>
     <remotesteps>
       <input>
       </input>
@@ -668,7 +645,7 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
+      <xloc>240</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -709,7 +686,7 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
+      <xloc>384</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -739,7 +716,7 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>C:\Pentaho Training\DI 1100\Module 5 - Scalability\Lesson 2 - Clustering\Guided Demo Clustered Group by\solution\widgets_group_by_output</name>
+      <name>C:\Pentaho Training\DI 1100\Module 5 - Scalability\Lesson 2 - Monitoring &amp; Clustering\Guided Demo Clustered Sorting\widgets_group_by_output</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -790,7 +767,7 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
+      <xloc>592</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>tr_clustered_group_by</name>
+    <name>tr_round_copy</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -488,10 +488,10 @@
   </info>
   <notepads>
     <notepad>
-      <note>Guided Demonstration: Group by</note>
-      <xloc>80</xloc>
+      <note>Guided Demonstration: Round-Robin or Copy</note>
+      <xloc>336</xloc>
       <yloc>64</yloc>
-      <width>216</width>
+      <width>292</width>
       <heigth>28</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
@@ -509,15 +509,14 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>As the Group by step is clustered, the rows are sent in round-robin fashion from the CSV
-file input to each Slave node.
-Swim lanes ensure each dataset from the Memory Group by step is then sent to the corresponding 
-Sort row step i.e copy instead of round-robin.
-Each cluster / Slave node returns independent grouped by sorted rows to the Master via the Text file output step.</note>
-      <xloc>96</xloc>
-      <yloc>224</yloc>
-      <width>600</width>
-      <heigth>90</heigth>
+      <note>To resolve the issue of Round-Robin distribution of the rows from the Data Grid step, 
+change the Data Movement to 'Copy'.
+
+View the widget_output.txt before / after any changes.</note>
+      <xloc>336</xloc>
+      <yloc>336</yloc>
+      <width>459</width>
+      <heigth>73</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -528,25 +527,25 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
       <backgroundcolorred>255</backgroundcolorred>
       <backgroundcolorgreen>255</backgroundcolorgreen>
       <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>0</bordercolorred>
-      <bordercolorgreen>128</bordercolorgreen>
-      <bordercolorblue>0</bordercolorblue>
+      <bordercolorred>192</bordercolorred>
+      <bordercolorgreen>192</bordercolorgreen>
+      <bordercolorblue>192</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
   </notepads>
   <order>
     <hop>
       <from>CSV file input</from>
-      <to>Memory Group by</to>
+      <to>Stream lookup</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Memory Group by</from>
-      <to>Sort rows</to>
+      <from>Data Grid</from>
+      <to>Stream lookup</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows</from>
+      <from>Stream lookup</from>
       <to>Text file output</to>
       <enabled>Y</enabled>
     </hop>
@@ -562,7 +561,7 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1100\Module 5 - Scalability\Lesson 2 - Monitoring &amp; Clustering\Guided Demo Clustered Sorting\solution\widgets.txt</filename>
+    <filename>C:\Pentaho Training\DI 1500\Module 5 - Scalability\Lesson 2 - Clustering\Guided Demo Round-Robin or Copy\widgets.txt</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -572,7 +571,7 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
     <buffer_size>50000</buffer_size>
     <lazy_conversion>N</lazy_conversion>
     <add_filename_result>N</add_filename_result>
-    <parallel>Y</parallel>
+    <parallel>N</parallel>
     <newline_possible>N</newline_possible>
     <encoding/>
     <fields>
@@ -607,14 +606,14 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>144</yloc>
+      <xloc>352</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Memory Group by</name>
-    <type>MemoryGroupBy</type>
+    <name>Data Grid</name>
+    <type>DataGrid</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -623,21 +622,49 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <give_back_row>N</give_back_row>
-    <group>
-      <field>
-        <name>CITY</name>
-      </field>
-    </group>
     <fields>
       <field>
-        <aggregate>Widgets</aggregate>
-        <subject>Widgets</subject>
-        <type>SUM</type>
-        <valuefield/>
+        <name>CITY</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>COUNTRY</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
-    <cluster_schema>Pentaho</cluster_schema>
+    <data>
+      <line>
+        <item>London</item>
+        <item>UK</item>
+      </line>
+      <line>
+        <item>New York</item>
+        <item>USA</item>
+      </line>
+      <line>
+        <item>Madrid</item>
+        <item>Spain</item>
+      </line>
+      <line>
+        <item>Paris</item>
+        <item>France</item>
+      </line>
+    </data>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -645,14 +672,14 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>144</yloc>
+      <xloc>528</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Sort rows</name>
-    <type>SortRows</type>
+    <name>Stream lookup</name>
+    <type>StreamLookup</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -661,23 +688,23 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
+    <from>Data Grid</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>N</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
         <name>CITY</name>
-        <ascending>Y</ascending>
-        <case_sensitive>Y</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>2</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
+        <field>CITY</field>
+      </key>
+      <value>
+        <name>COUNTRY</name>
+        <rename>COUNTRY</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
     <cluster_schema>Pentaho</cluster_schema>
     <remotesteps>
       <input>
@@ -686,8 +713,8 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>144</yloc>
+      <xloc>528</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -708,15 +735,15 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
     <footer>N</footer>
-    <format>DOS</format>
+    <format>UNIX</format>
     <compression>None</compression>
-    <encoding>windows-1252</encoding>
+    <encoding/>
     <endedLine/>
     <fileNameInField>N</fileNameInField>
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>C:\Pentaho Training\DI 1100\Module 5 - Scalability\Lesson 2 - Monitoring &amp; Clustering\Guided Demo Clustered Sorting\widgets_group_by_output</name>
+      <name>C:\Pentaho Training\DI 1500\Module 5 - Scalability\Lesson 2 - Clustering\Guided Demo Round-Robin or Copy\widgets_country_output</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -758,6 +785,18 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
         <length>15</length>
         <precision>0</precision>
       </field>
+      <field>
+        <name>COUNTRY</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
     </fields>
     <cluster_schema/>
     <remotesteps>
@@ -767,8 +806,8 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>144</yloc>
+      <xloc>688</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -777,9 +816,4 @@ Each cluster / Slave node returns independent grouped by sorted rows to the Mast
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
-  <attributes>
-    <group>
-      <name>explorerState</name>
-    </group>
-  </attributes>
 </transformation>
