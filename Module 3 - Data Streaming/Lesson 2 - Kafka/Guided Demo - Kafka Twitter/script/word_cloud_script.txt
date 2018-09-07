@@ -46,7 +46,7 @@ docs <- tm_map(docs, removeWords, stopwords("english"))
 
 # Remove your own stop word
 # specify your stopwords as a character vector
-docs <- tm_map(docs, removeWords, c("https", "http", "the", "t.co", "of", "and", "programming", "scala", "java", "ruby" )) 
+docs <- tm_map(docs, removeWords, c("https", "http", "the", "t.co", "of", "and", "programming", "scala", "java", "ruby", "python" )) 
 
 # Remove punctuations
 docs <- tm_map(docs, removePunctuation)
@@ -68,7 +68,7 @@ head(d, 20)
 
 
 set.seed(1234)
-png("C:\\Projects\\twitter-demo\\word_cloud\\wordcloud.png", width=600,height=800)
+png("C:\\Projects\\twitter\\word_cloud\\wordcloud.png", width=600,height=800)
 wcloud <- wordcloud(words = d$word, freq = d$freq, min.freq = 1,
           max.words=150, random.order=FALSE, rot.per=0.35, 
           colors=brewer.pal(8, "Dark2"))
@@ -80,7 +80,7 @@ findFreqTerms(dtm, lowfreq = 4)
 findAssocs(dtm, terms = "programming", corlimit = 0.3)
 
 
-png("C:\\Projects\\twitter-demo\\word_cloud\\freq.png", width=600,height=800)
+png("C:\\Projects\\twitter\\word_cloud\\freq.png", width=600,height=800)
 barplot(d[1:20,]$freq, las = 2, names.arg = d[1:20,]$word,
         col ="lightblue", main ="Most frequent words",
         ylab = "Word frequencies")
