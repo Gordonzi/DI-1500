@@ -436,10 +436,10 @@
   </info>
   <notepads>
     <notepad>
-      <note>Exercise: Kafka - Twitter Word Cloud</note>
+      <note>Use Case: Twitter Word Cloud Analysis</note>
       <xloc>208</xloc>
       <yloc>64</yloc>
-      <width>236</width>
+      <width>248</width>
       <heigth>28</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
@@ -458,7 +458,7 @@
     </notepad>
     <notepad>
       <note>The ouput of the word cloud is located at:
-C:\Projects\twitter-demo\word_cloud</note>
+C:\Projects\twitter\word_cloud</note>
       <xloc>384</xloc>
       <yloc>192</yloc>
       <width>231</width>
@@ -497,13 +497,13 @@ C:\Projects\twitter-demo\word_cloud</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1500\Module 3 - Data Streaming\Lesson 2 - Kafka\Guided Demo - Kafka Twitter\Tweets_20180208.txt</filename>
+    <filename>${Internal.Entry.Current.Directory}\Tweets_20180208.txt</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
     <separator>;</separator>
     <enclosure>"</enclosure>
-    <header>Y</header>
+    <header>N</header>
     <buffer_size>50000</buffer_size>
     <lazy_conversion>Y</lazy_conversion>
     <add_filename_result>N</add_filename_result>
@@ -512,7 +512,7 @@ C:\Projects\twitter-demo\word_cloud</note>
     <encoding>UTF-8</encoding>
     <fields>
       <field>
-        <name>tweet_text</name>
+        <name>text</name>
         <type>String</type>
         <format/>
         <currency>£</currency>

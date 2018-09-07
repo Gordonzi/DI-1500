@@ -436,35 +436,14 @@
   </info>
   <notepads>
     <notepad>
-      <note>Exercise: Kafka - Twitter Stream</note>
-      <xloc>224</xloc>
-      <yloc>64</yloc>
-      <width>204</width>
+      <note>Use Case: Analysis Twitter</note>
+      <xloc>256</xloc>
+      <yloc>96</yloc>
+      <width>171</width>
       <heigth>28</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>255</bordercolorred>
-      <bordercolorgreen>255</bordercolorgreen>
-      <bordercolorblue>255</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
-      <note>Kafka Consumer step consumes twitter stream</note>
-      <xloc>224</xloc>
-      <yloc>96</yloc>
-      <width>255</width>
-      <heigth>26</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
       <fontitalic>N</fontitalic>
       <fontcolorred>0</fontcolorred>
       <fontcolorgreen>0</fontcolorgreen>
@@ -492,13 +471,14 @@
       <schema_name/>
     </partitioning>
     <clusterName/>
-    <topic>demo-twitter</topic>
+    <topic>twitterstream</topic>
     <consumerGroup>twitter-group</consumerGroup>
     <transformationPath>${Internal.Entry.Current.Directory}/tr_twitter_analysis.ktr</transformationPath>
-    <batchSize>100000</batchSize>
+    <SUB_STEP/>
+    <batchSize>10</batchSize>
     <batchDuration>1000</batchDuration>
     <connectionType>DIRECT</connectionType>
-    <directBootstrapServers>localhost:9092</directBootstrapServers>
+    <directBootstrapServers>192.168.99.100:9092</directBootstrapServers>
     <OutputField kafkaName="key" type="String">Key</OutputField>
     <OutputField kafkaName="message" type="String">Message</OutputField>
     <OutputField kafkaName="topic" type="String">Topic</OutputField>
@@ -521,7 +501,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
+      <xloc>272</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
