@@ -1240,7 +1240,7 @@ submission
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 4 - Machine Learning\Exercise - Credit Card\data\customer.csv</filename>
+    <filename>${Internal.Entry.Current.Directory}\data\customer.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -1312,7 +1312,7 @@ submission
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 4 - Machine Learning\Exercise - Credit Card\data\customer_billing.csv</filename>
+    <filename>${Internal.Entry.Current.Directory}\data\customer_billing.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -1395,7 +1395,7 @@ submission
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1500\Module 2 - Data Sources\Lesson 4 - Machine Learning\Exercise - Credit Card\data\transaction_details.csv</filename>
+    <filename>${Internal.Entry.Current.Directory}\data\transaction_details.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -1695,6 +1695,7 @@ FROM strataml_customer_billing
     <auth_kerberos>N</auth_kerberos>
     <connect_timeout/>
     <socket_timeout/>
+    <use_ssl_socket_factory>N</use_ssl_socket_factory>
     <read_preference>primary</read_preference>
     <output_json>Y</output_json>
     <query_is_pipeline>N</query_is_pipeline>
@@ -1932,7 +1933,6 @@ FROM strataml_customer_billing
     <create_parent_folder>Y</create_parent_folder>
     <file>
       <name>${Internal.Entry.Current.Directory}\output\predictions</name>
-      <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
       <extention>csv</extention>
