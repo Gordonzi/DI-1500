@@ -434,12 +434,37 @@
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
+    <notepad>
+      <note>MQTT Consumer
+Connection: localhost:1883
+Topics: IoTDevices
+QoS: 0
+</note>
+      <xloc>192</xloc>
+      <yloc>208</yloc>
+      <width>154</width>
+      <heigth>89</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>255</bordercolorred>
+      <bordercolorgreen>0</bordercolorgreen>
+      <bordercolorblue>0</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <order>
   </order>
   <step>
-    <name>MQTT Consumer</name>
-    <type>MQTTConsumer</type>
+    <name>Replace Me ..</name>
+    <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -448,102 +473,6 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <step-props secure="PASSWORD SSL_VALUES">
-      <group name="">
-        <property group="" name="MQTT_SERVER">
-          <value xsi:type="xs:string">localhost:1883</value>
-        </property>
-        <property group="" name="TOPICS">
-          <value xsi:type="xs:string">IoTDevices</value>
-        </property>
-        <property group="" name="MSG_OUTPUT_NAME">
-          <value xsi:type="xs:string">Message</value>
-        </property>
-        <property group="" name="TOPIC_OUTPUT_NAME">
-          <value xsi:type="xs:string">Topic</value>
-        </property>
-        <property group="" name="QOS">
-          <value xsi:type="xs:string">0</value>
-        </property>
-        <property group="" name="USERNAME">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="PASSWORD">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="KEEP_ALIVE_INTERVAL">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="MAX_INFLIGHT">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="CONNECTION_TIMEOUT">
-          <value xsi:type="xs:string">30</value>
-        </property>
-        <property group="" name="CLEAN_SESSION">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="STORAGE_LEVEL">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="SERVER_URIS">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="MQTT_VERSION">
-          <value xsi:type="xs:string">3</value>
-        </property>
-        <property group="" name="AUTOMATIC_RECONNECT">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="TRANSFORMATION_PATH">
-          <value xsi:type="xs:string">${Internal.Entry.Current.Directory}/tr_datastream.ktr</value>
-        </property>
-        <property group="" name="NUM_MESSAGES">
-          <value xsi:type="xs:string">1000</value>
-        </property>
-        <property group="" name="DURATION">
-          <value xsi:type="xs:string">1000</value>
-        </property>
-        <property group="" name="SUB_STEP">
-          <value xsi:type="xs:string"/>
-        </property>
-      </group>
-      <group name="SSL">
-        <property group="SSL" name="USE_SSL">
-          <value xsi:type="xs:boolean">false</value>
-        </property>
-        <property group="SSL" name="SSL_KEYS">
-          <value xsi:type="xs:string">ssl.contextProvider</value>
-          <value xsi:type="xs:string">ssl.enabledCipherSuites</value>
-          <value xsi:type="xs:string">ssl.keyManager</value>
-          <value xsi:type="xs:string">ssl.keyStore</value>
-          <value xsi:type="xs:string">ssl.keyStorePassword</value>
-          <value xsi:type="xs:string">ssl.keyStoreProvider</value>
-          <value xsi:type="xs:string">ssl.keyStoreType</value>
-          <value xsi:type="xs:string">ssl.protocol</value>
-          <value xsi:type="xs:string">ssl.trustManager</value>
-          <value xsi:type="xs:string">ssl.trustStore</value>
-          <value xsi:type="xs:string">ssl.trustStorePassword</value>
-          <value xsi:type="xs:string">ssl.trustStoreProvider</value>
-          <value xsi:type="xs:string">ssl.trustStoreType</value>
-        </property>
-        <property group="SSL" name="SSL_VALUES">
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string">Encrypted 2be98afc86aa7f2e4cb79ce10beb884e9</value>
-          <value xsi:type="xs:string">Encrypted 2be98afc86aa7f2e4cb79ce10bea683e9</value>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-        </property>
-      </group>
-    </step-props>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -552,8 +481,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>80</yloc>
+      <xloc>208</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -562,4 +491,13 @@
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+      <attribute>
+        <key>Replace Me ..</key>
+        <value/>
+      </attribute>
+    </group>
+  </attributes>
 </transformation>

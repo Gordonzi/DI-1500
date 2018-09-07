@@ -495,10 +495,10 @@ delayTime
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>Exercise: MQTT - IoT</note>
+      <note>Guided Demonstration: MQTT - IoT</note>
       <xloc>64</xloc>
       <yloc>48</yloc>
-      <width>137</width>
+      <width>229</width>
       <heigth>28</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
@@ -536,6 +536,32 @@ delayTime
       <bordercolorblue>255</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
+    <notepad>
+      <note>MQTT Producer
+Connection: localhost: 1883
+Client ID: ${ClientID}
+Topic: ${Topic}
+QoS: 0
+Message field: message</note>
+      <xloc>736</xloc>
+      <yloc>224</yloc>
+      <width>157</width>
+      <heigth>106</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>255</bordercolorred>
+      <bordercolorgreen>0</bordercolorgreen>
+      <bordercolorblue>0</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <order>
     <hop>
@@ -565,13 +591,13 @@ delayTime
     </hop>
     <hop>
       <from>delay</from>
-      <to>MQTT Producer</to>
+      <to>Replace Me ..</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>MQTT Producer</name>
-    <type>MQTTProducer</type>
+    <name>Replace Me ..</name>
+    <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -580,90 +606,6 @@ delayTime
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <step-props secure="PASSWORD SSL_VALUES">
-      <group name="">
-        <property group="" name="MQTT_SERVER">
-          <value xsi:type="xs:string">localhost:1883</value>
-        </property>
-        <property group="" name="CLIENT_ID">
-          <value xsi:type="xs:string">${clientID}</value>
-        </property>
-        <property group="" name="TOPIC">
-          <value xsi:type="xs:string">${topic}</value>
-        </property>
-        <property group="" name="QOS">
-          <value xsi:type="xs:string">0</value>
-        </property>
-        <property group="" name="MESSAGE_FIELD">
-          <value xsi:type="xs:string">message</value>
-        </property>
-        <property group="" name="USERNAME">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="PASSWORD">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="KEEP_ALIVE_INTERVAL">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="MAX_INFLIGHT">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="CONNECTION_TIMEOUT">
-          <value xsi:type="xs:string">30</value>
-        </property>
-        <property group="" name="CLEAN_SESSION">
-          <value xsi:type="xs:string">False</value>
-        </property>
-        <property group="" name="STORAGE_LEVEL">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="SERVER_URIS">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="MQTT_VERSION">
-          <value xsi:type="xs:string">3</value>
-        </property>
-        <property group="" name="AUTOMATIC_RECONNECT">
-          <value xsi:type="xs:string">True</value>
-        </property>
-      </group>
-      <group name="SSL">
-        <property group="SSL" name="USE_SSL">
-          <value xsi:type="xs:boolean">false</value>
-        </property>
-        <property group="SSL" name="SSL_KEYS">
-          <value xsi:type="xs:string">ssl.contextProvider</value>
-          <value xsi:type="xs:string">ssl.enabledCipherSuites</value>
-          <value xsi:type="xs:string">ssl.keyManager</value>
-          <value xsi:type="xs:string">ssl.keyStore</value>
-          <value xsi:type="xs:string">ssl.keyStorePassword</value>
-          <value xsi:type="xs:string">ssl.keyStoreProvider</value>
-          <value xsi:type="xs:string">ssl.keyStoreType</value>
-          <value xsi:type="xs:string">ssl.protocol</value>
-          <value xsi:type="xs:string">ssl.trustManager</value>
-          <value xsi:type="xs:string">ssl.trustStore</value>
-          <value xsi:type="xs:string">ssl.trustStorePassword</value>
-          <value xsi:type="xs:string">ssl.trustStoreProvider</value>
-          <value xsi:type="xs:string">ssl.trustStoreType</value>
-        </property>
-        <property group="SSL" name="SSL_VALUES">
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string">Encrypted 2be98afc86aa7f2e4cb79ce10beb884e9</value>
-          <value xsi:type="xs:string">Encrypted 2be98afc86aa7f2e4cb79ce10bea683e9</value>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-          <value xsi:type="xs:string"/>
-        </property>
-      </group>
-    </step-props>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -672,8 +614,8 @@ delayTime
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
-      <yloc>256</yloc>
+      <xloc>736</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -698,8 +640,8 @@ delayTime
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>256</yloc>
+      <xloc>624</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -987,8 +929,8 @@ delayTime
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
-      <yloc>256</yloc>
+      <xloc>512</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
