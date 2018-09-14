@@ -13,9 +13,9 @@ echo. 1. Zookeeper
 echo. 2. Kafka - Single Broker
 echo.
 echo.
-echo. 3. Create Topic - twitterstream
+echo. 3. Create Topic - test
 echo. 4. List Topics
-echo. 5. Consumer - Twitter Group
+echo. 5. Consumer - test-group
 echo. 6. Producer
 echo.
 echo. 7. Stop Kafka Broker
@@ -37,7 +37,7 @@ GOTO Start
 
 :Item_3
 CD \Confluent-5.0.0\bin\windows\
-start kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic twitterstream
+start kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 GOTO Start
 
 :Item_4
@@ -47,12 +47,12 @@ GOTO Start
 
 :Item_5
 CD \Confluent-5.0.0\bin\windows\
-start kafka-console-consumer.bat --topic twitterstream  --from-beginning  --bootstrap-server localhost:9092 --consumer-property group.id=Twitter-group 
+start kafka-console-consumer.bat --topic test  --from-beginning  --bootstrap-server localhost:9092 --consumer-property group.id=test-group 
 GOTO Start
 
 :Item_6
 CD \Confluent-5.0.0\bin\windows\
-start kafka-console-producer.bat --broker-list localhost:9092 --topic twitterstream
+start kafka-console-producer.bat --broker-list localhost:9092 --topic test
 GOTO Start
 
 
